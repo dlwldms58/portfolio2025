@@ -1,0 +1,1124 @@
+/* ===========================
+   Base / Reset / Tokens
+=========================== */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg: #FEFEFC;
+    --ink: #303030;
+    --ink-2: #444;
+    --brand: #FCC60A;
+    --card: #fff;
+    --shadow: 0 6px 24px rgba(0, 0, 0, .12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: bottom;
+    border: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    background: var(--bg);
+    color: var(--ink);
+}
+
+/* ===========================
+   HERO (Header + Video)
+=========================== */
+.hero {
+    width: 100%;
+}
+
+.hero .header {
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.hero .header .logo {
+    width: 15%;
+}
+
+.hero .header .logo p {
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--brand);
+    margin-bottom: -20px;
+}
+
+.hero .header .logo em {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.hero .header .gnb {
+    width: 70%;
+}
+
+.hero .header .gnb ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .header .gnb ul>li {
+    border-left: 1px solid var(--ink);
+}
+
+.hero .header .gnb ul>li:first-child {
+    border-left: none;
+}
+
+.hero .header .gnb ul>li>a {
+    font-size: 15px;
+    padding: 0 30px;
+}
+
+.hero .header .gnb ul>li>a:hover {
+    font-weight: 700;
+}
+
+.hero .header .util {
+    width: 15%;
+}
+
+.hero .header .util ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.hero .header .util ul li a {
+    display: block;
+    padding: 10px;
+}
+
+.hero .header .util ul li:nth-child(4) a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 36px;
+    border-radius: 20px;
+    background: var(--brand);
+    font-weight: 700;
+}
+
+.hero .box1 {
+    width: 100%;
+    height: 470px;
+    text-align: center;
+}
+
+.hero .box1 .vid {
+    width: 1280px;
+    height: 470px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: #000;
+    overflow: hidden;
+}
+
+.hero .box1 .vid iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ===========================
+   BOX2 (Lamp + Carousel-style cards)
+=========================== */
+.box2 {
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+.box2 .box2-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.box2 .box2-1 h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.box2 .box2-1 .flash {
+    width: 55%;
+    height: 190px;
+}
+
+.box2 .box2-1 .flash ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box2 .box2-1 .flash ul li {
+    width: 130px;
+    height: 180px;
+    text-align: center;
+    position: relative;
+    
+}
+
+.box2 .box2-1 .flash ul li:nth-child(2) .light {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translateX(-50.3%);
+    height: 287px;
+    z-index: -1;
+    display: block;
+    
+}
+
+.box2 .box2-1 .btn {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.box2 .box2-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    height: 300px;
+    margin-top: 10px;
+}
+
+.box2 .box2-2 .btnL,
+.box2 .box2-2 .btnR {
+    font-size: 20px;
+    width: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.box2 .box2-2 ul {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.box2 .box2-2 ul>li {
+    text-align: center;
+}
+
+.box2 .box2-2 ul>li>div {
+    width: 130px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 .box2-2 ul>li>div img {
+    max-width: 200px;
+    width: 200px;
+}
+
+.box2 .box2-2 ul>li>p {
+    width: 110px;
+    height: 40px;
+    margin: 10px auto 0;
+    border-radius: 30px;
+    background: var(--ink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 .box2-2 ul>li>p>a {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* ===========================
+   BOX3 (New Menu Feature)
+=========================== */
+.box3 {
+    background-color: #FCC60A;
+    border-radius: 50%;
+    /* background: url(img/bg_1.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 40px;
+    gap: 200px;
+}
+.box3  .btnL,
+.box3  .btnR {
+    font-size: 20px;
+    width: 32px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.box3_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.box3-1 {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.box3-1 .img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    width: 50%;
+}
+
+.box3-1 .img .img_big img {
+    width: 400px;
+}
+
+.box3-1 .img .img_small {
+    border-left: 2px solid var(--ink);
+    padding-left: 10px;
+    margin-left: -20px;
+}
+
+.box3-1 .img .img_small ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box3-1 .img .img_small ul li img {
+    width: 55px;
+}
+
+.box3-1 .img_intro {
+    width: 50%;
+    margin-top: 40px;
+}
+
+.box3-1 .img_intro .intro_txt em {
+    display: inline-block;
+    font-size: 15px;
+    background: aliceblue;
+    border-radius: 10px;
+    padding: 3px 6px;
+    margin-bottom: 8px;
+}
+
+.box3-1 .img_intro .intro_txt h3 {
+    font-size: 40px;
+    margin-bottom: 6px;
+}
+
+.box3-1 .img_intro .intro_txt p {
+    margin-bottom: 20px;
+    color: var(--ink-2);
+}
+
+.box3-1 .img_intro .intro_btn {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.box3-1 .img_intro .intro_btn li {
+    flex: 1 1 0;
+    height: 38px;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box3-1 .img_intro .intro_btn li:nth-child(1) {
+    background: aliceblue;
+}
+
+.box3-1 .img_intro .intro_btn li:nth-child(2) {
+    background: var(--ink);
+}
+
+.box3-1 .img_intro .intro_btn li:nth-child(2) a {
+    color: #fff;
+    font-weight: 600;
+}
+
+.box3-1 .img_intro .intro_rating {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.box3-1 .img_intro .intro_rating .rating_icon {
+    display: flex;
+    gap: 4px;
+}
+
+.box3-1 .img_intro .intro_rating .rating_txt em {
+    font-style: normal;
+    margin-left: 6px;
+    font-weight: 700;
+}
+
+.box3-1 .img_intro .intro_rating .rating_txt span {
+    margin-left: 14px;
+    padding-left: 14px;
+    border-left: 2px solid var(--ink);
+    color: var(--ink-2);
+}
+
+.box3-2 .Review h2 {
+    font-size: 25px;
+    margin: 4px 10px 12px;
+}
+
+.box3-2 .Review ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.box3-2 .Review ul li {
+    width: 100%;
+    max-width: 300px;
+    min-height: 50px;
+    background: #fff;
+    border: 1px solid var(--ink);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px 4px rgba(0, 0, 0, 1);
+}
+
+.box3-2 .Review ul li i {
+    margin-right: 6px;
+    color: var(--brand);
+}
+
+.box3-2 .Review ul li p {
+    display: inline;
+}
+
+.box3-2 .Review ul li span {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    color: var(--ink-2);
+}
+
+.box3-2 .btn_txt {
+    text-align: center;
+    margin: 18px 0;
+    color: var(--ink-2);
+}
+
+.box3-2 .btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.box3-2 .btn a {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: #fff;
+    box-shadow: var(--shadow);
+}
+
+/* ===========================
+   BOX4 (Brand Story + Semi-circle Menu)
+=========================== */
+.box4 {
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.box4-1 {
+    position: relative;
+}
+
+.box4-1 h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 90px;
+}
+
+.box4-1 ul {
+    position: relative;
+    width: 800px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.box4-1 ul li {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.box4-1 ul li:nth-child(1) {
+    top: 35%;
+    left: 0%;
+}
+
+.box4-1 ul li:nth-child(2) {
+    top: 10%;
+    left: 25%;
+}
+
+.box4-1 ul li:nth-child(3) {
+    top: 0%;
+    left: 50%;
+}
+
+.box4-1 ul li:nth-child(4) {
+    top: 10%;
+    left: 75%;
+}
+
+.box4-1 ul li:nth-child(5) {
+    top: 35%;
+    left: 100%;
+}
+
+.box4-1 ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .25s ease;
+}
+
+.box4-1 ul li a:hover {
+    transform: scale(1.06);
+}
+
+.box4-1 ul li img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.box4-1 ul li p {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+}
+
+.box4-2 h2 {
+    font-size: 80px;
+    color: var(--brand);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 24px 0 10px;
+}
+
+.box4-2 .txt1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 8px 0;
+}
+
+.box4-2 .txt2 {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 20px 0 40px;
+}
+
+.box4-2 .btn {
+    display: flex;
+    justify-content: center;
+}
+
+.box4-2 .btn a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 1px solid var(--ink);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .12);
+    transition: all .25s ease;
+}
+
+.box4-2 .btn a:hover {
+    transform: translateY(-2px);
+    background: #f8f8f8;
+}
+
+/* ===========================
+   BOX5 (History Timeline)
+=========================== */
+
+.box5 {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.box5 h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 64px;
+}
+
+.box5 h2 em {
+    color: var(--brand);
+    font-style: normal;
+    margin: 0 6px 0 4px;
+}
+
+.box5_inner {
+    position: relative;
+    padding: 0 40px;
+}
+
+.box5_inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    background: linear-gradient(to bottom, rgba(252,198,10,1), rgba(252,198,10,0));
+    transform: translateX(-50%);
+}
+
+.HISTORY {
+    position: relative;
+    margin-bottom: 90px;
+}
+
+.HISTORY h3 {
+    position: absolute;
+    top: -2px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--brand);
+}
+.HISTORY:nth-child(odd) h3 {
+    left: 40%;
+    text-align: right;
+}
+
+.HISTORY:nth-child(even) h3 {
+    right: 40%;
+    text-align: left;
+}
+
+.content-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content-group .img_img {
+    width: 410px;
+}
+
+.content-group:nth-child(ood) .img_img {
+   
+}
+.content-group:nth-child(even) .img_img {
+    
+}
+
+/* ===========================
+   BOX6 (Solar System Map)
+=========================== */
+/* 캔버스 */
+.box6 {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 120px auto;
+}
+
+.solar-system {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 중앙 지구 */
+.earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.earth img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.bhc-text,
+.world-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .4);
+}
+
+.bhc-text {
+    top: 45%;
+    font-size: 28px;
+}
+
+.world-text {
+    top: 60%;
+    font-size: 18px;
+}
+
+/* 궤도 공통 */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dashed #FFD700;
+    border-radius: 50%;
+    animation: spin 20s linear infinite;
+}
+
+/* 각 궤도 크기 */
+.orbit-1 {
+    width: 300px;
+    height: 300px;
+}
+
+.orbit-2 {
+    width: 360px;
+    height: 360px;
+}
+
+.orbit-3 {
+    width: 440px;
+    height: 440px;
+}
+
+.orbit-4 {
+    width: 520px;
+    height: 520px;
+}
+
+.orbit-5 {
+    width: 600px;
+    height: 600px;
+}
+
+.orbit-6 {
+    width: 680px;
+    height: 680px;
+}
+
+.orbit-7 {
+    width: 760px;
+    height: 760px;
+}
+
+/* 행성 공통 (궤도 끝점에 부착) */
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    animation: planet-stay 20s linear infinite;
+    /* 역회전으로 ‘정면 유지’ */
+}
+
+.planet img {
+    border-radius: 50%;
+    display: block;
+}
+
+.planet-text {
+    display: none;
+}
+
+/* 툴팁(매장 수) */
+.planet .planet-info {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, .75);
+    color: #fff;
+    font-size: 13px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+    z-index: 2;
+}
+
+.planet .planet-info::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, .75);
+}
+
+.planet:hover .planet-info {
+    opacity: 1;
+}
+
+/* 회전 애니메이션 */
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes planet-stay {
+    from {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+/* 느린 속도 + 궤도별 차등(안쪽 빠름 → 바깥 느림) */
+.orbit-1 {
+    animation-duration: 60s;
+}
+
+.orbit-1 .planet {
+    animation-duration: 60s;
+}
+
+.orbit-2 {
+    animation-duration: 75s;
+}
+
+.orbit-2 .planet {
+    animation-duration: 75s;
+}
+
+.orbit-3 {
+    animation-duration: 90s;
+}
+
+.orbit-3 .planet {
+    animation-duration: 90s;
+}
+
+.orbit-4 {
+    animation-duration: 105s;
+}
+
+.orbit-4 .planet {
+    animation-duration: 105s;
+}
+
+.orbit-5 {
+    animation-duration: 120s;
+}
+
+.orbit-5 .planet {
+    animation-duration: 120s;
+}
+
+.orbit-6 {
+    animation-duration: 135s;
+}
+
+.orbit-6 .planet {
+    animation-duration: 135s;
+}
+
+.orbit-7 {
+    animation-duration: 150s;
+}
+
+.orbit-7 .planet {
+    animation-duration: 150s;
+}
+
+/* 행성 크기(샘플: 필요시 조절) — 매장 수 기반이라면 여기만 바꾸면 됨 */
+.planet.usa img {
+    width: 80px;
+    height: 80px;
+}
+
+.planet.canada img {
+    width: 50px;
+    height: 50px;
+}
+
+.planet.hongkong img {
+    width: 60px;
+    height: 60px;
+}
+
+.planet.thailand img {
+    width: 100px;
+    height: 100px;
+}
+
+.planet.malaysia img {
+    width: 60px;
+    height: 60px;
+}
+
+.planet.singapore img {
+    width: 50px;
+    height: 50px;
+}
+
+.planet.korea img {
+    width: 150px;
+    height: 150px;
+}
+
+/* ===========================
+   BOX7 (Placeholder)
+=========================== */
+.box7 {
+  position: relative;
+  max-width: 880px;
+  margin: 40px auto;
+}
+.box7 .viewport {
+  overflow: hidden;
+  padding: 10px 64px;
+}
+.box7 .track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: transform .4s;
+}
+.box7 .slide {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  transform: scale(.92);
+  opacity: .7;
+}
+.box7 .slide.is-active {
+  width: 420px;
+  height: 240px;
+  transform: scale(1);
+  opacity: 1;
+}
+.box7 iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+  border-radius: 12px;
+}
+.box7 .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 0;
+  background: #2c2c2c;
+  color: #fff;
+  cursor: pointer;
+}
+/* .box7 .nav.prev { left: 12px; }
+.box7 .nav.next { right: 12px; } */
+.box7 .dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.box7 .dots button {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: 0;
+  background: #cfcfcf;
+}
+.box7 .dots .on { background: #7a7a7a; }
+
+/* ===========================
+   BOX8 (News)
+=========================== */
+.box8 {
+    background: url(img/bg_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box8_inner {
+    padding: 50px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.box8_inner h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.box8_inner .info_menu {
+    display: flex;
+    gap: 10px;
+}
+
+.box8_inner .info_menu li a {
+    display: inline-block;
+    background: #fff;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.box8_inner .info {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin: 10px auto 0;
+    background: var(--brand);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.box8_inner .info>span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    font-weight: 800;
+    color: #FCC60A;
+    opacity: .1;
+    user-select: none;
+    pointer-events: none;
+}
+
+.box8_inner .info ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.box8_inner .info ul li {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box8_inner .info_btn a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+    transition: .2s;
+}
+
+.box8_inner .info_btn a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* ===========================
+   BOX9 (Footer)
+=========================== */
+.box9 {
+    width: 100%;
+    min-height: 220px;
+    background: var(--ink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 16px;
+}
+
+.box9 p {
+    color: #fff;
+    line-height: 1.7;
+}
