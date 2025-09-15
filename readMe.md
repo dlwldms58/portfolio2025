@@ -63,7 +63,7 @@
 ### 👀 페이지 미리보기
 | 메인 페이지 | 상품 상세 페이지 |
 |------------|
-| ![메인](project002/mockup/project002_mockup all.png).|
+| ![메인](project002/mockup/project002_mockup all.png) | ![서브](이미지주소) |
 
 ---
 
