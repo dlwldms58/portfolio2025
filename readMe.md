@@ -62,14 +62,12 @@
 
 ### 👀 페이지 미리보기
 | 메인 페이지 | 상품 상세 페이지 |
-|------------|
-| ![메인](project002/mockup/project002_mockup all.png) | ![서브](이미지주소) |
+|------------|----------------|
+| ![메인](https://github.com/dlwldms58/portfolio2025/blob/main/project002/project002_mockup%20all.png) | ![상품](이미지주소) |
 
 ---
 
 
-
----
 
 ## 🎯 배운 점 & 성장 포인트
 - HTML/CSS의 시멘틱 마크업과 유지보수성을 고려한 코드 작성법 습득
