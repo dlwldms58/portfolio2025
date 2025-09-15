@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프로젝트2</title>
+    <title>BHC</title>
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="style.css">
     <!-- 제이쿼리 CDN -->
@@ -25,521 +25,554 @@
 </head>
 
 <body>
+    <div class="shopping">
+        <p class="icon"><i class="fa-solid fa-basket-shopping"></i><span>0</span></p>
+        <div class="cart_page">
 
-    <div class="hero">
-        <header class="header">
-            <h1 class="logo">
-                <a href="">
-                    <p>bhc</p>
-                    <em>CHICKEN</em>
-                </a>
-            </h1>
-            <nav class="gnb">
+            <p>장바구니</p>
+            <div>
                 <ul>
-                    <li><a href="">매뉴소개</a></li>
-                    <li><a href="">매장소개</a></li>
-                    <li><a href="">창업정보</a></li>
-                    <li><a href="">BHC소식</a></li>
-                    <li><a href="">브랜드소개</a></li>
-                    <li><a href="">고객센터</a></li>
-                    <li><a href="">E쿠폰안내</a></li>
+                    <li>
+                        <span>상품정보</span>
+                        <span>옵션</span>
+                        <span>금액</span>
+                        <span>갯수</span>
+                    </li>
+
                 </ul>
-            </nav>
-            <div class="util">
-                <ul>
-                    <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
-                    <li><a href=""><i class="fa-regular fa-user"></i></a></li>
-                    <li><a href=""><i class="fa-solid fa-basket-shopping"></i></a></li>
-                    <li><a href="">Order Now</a></li>
-                </ul>
+                <hr>
+                <div>
+                    <p>총 상품금액 : <em>00</em> 원</p>
+                    <p>총 배송비 : <em>00</em>원</p>
+                    <p>총 주문금액 : <em>00</em>원</p>
+                </div>
+
+
             </div>
 
-        </header>
+        </div>
+    </div>
+
+    <header class="header">
+        <h1 class="logo">
+            <a href="">
+                <p>bhc</p>
+                <em>CHICKEN</em>
+            </a>
+        </h1>
+        <nav class="gnb">
+            <ul>
+                <li><a href="">매뉴소개</a></li>
+                <li><a href="">매장소개</a></li>
+                <li><a href="">창업정보</a></li>
+                <li><a href="">BHC소식</a></li>
+                <li><a href="">브랜드소개</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">E쿠폰안내</a></li>
+            </ul>
+        </nav>
+        <div class="util">
+            <ul>
+                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-regular fa-user"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-basket-shopping"></i></a></li>
+                <li><a href="">Order Now</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <div id="wrap">
         <div class="box1">
             <figure class="vid">
-                <!-- <video autoplay muted loopsrc>
-                    <source src="https://www.youtube.com/embed/XE6lU5nEK-w?list=TLGGwQeXX6wbzDIwMTA5MjAyNQ" title="콰삭함의 무한 새로움, 콰삭톡 (30s)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" type="">
-                </video> -->
-                <!-- <iframe width="1000" height="470"
-                    src="https://www.youtube.com/embed/XE6lU5nEK-w?list=TLGGwQeXX6wbzDIwMzA5MjAyNQ"
-                    title="콰삭함의 무한 새로움, 콰삭톡 (30s)" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe> -->
                 <iframe width="820" height="470"
                     src="https://www.youtube.com/embed/XE6lU5nEK-w?modestbranding=1&controls=0&autoplay=1&mute=1&loop=1&playlist=XE6lU5nEK-w&rel=0"
                     title="콰삭함의 무한 새로움, 콰삭톡 (30s)" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    <!-- 원래 화면의 크기 : 820px 470px -->
                 </iframe>
             </figure>
         </div>
-    </div>
-    <div class="box2">
-        <div class="box2-1">
-            <h2>Menu</h2>
-            <div class="flash">
+        <div class="box2">
+            <div class="box2-1">
+                <!-- <h2>Menu</h2> -->
+                <div class="flash">
+                    <ul>
+                        <li><img src="img/Lamp/Lamp1.png" alt=""></li>
+                        <li>
+                            <img src="img/Lamp/Lamp2.png" alt="">
+                            <img class="light" src="img/Lamp/Lamplight.png" alt="">
+                        </li>
+                        <li><img src="img/Lamp/Lamp1.png" alt=""></li>
+                    </ul>
+                </div>
+                <!-- <div class="btn">
+                    전체보기
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div> -->
+            </div>
+            <div class="box2-2">
+                <div class="btnL">&lt;</div>
+                <div class="container">
+                    <button>클릭</button>
+                    <ul class="train">
+                        <li>
+                            <div><img src="img/chicken/Bburinkle.png" alt=""></div>
+                            <p><a href="">뿌링클</a></p>
+                        </li>
+                        <li>
+                            <div><img src="img/chicken/Kwaksakking_1.png" alt=""></div>
+                            <p><a href="">콱삭킹</a></p>
+                        </li>
+                        <li>
+                            <div><img src="img/chicken/MatchoKing.png" alt=""></div>
+                            <p><a href="">맛초킹</a></p>
+                        </li>
+                        <li>
+                            <div><img src="img/chicken/Bburinkle.png" alt=""></div>
+                            <p><a href="">뿌링핫</a></p>
+                        </li>
+                        <li>
+                            <div><img src="img/chicken/Kwaksakking_1.png" alt=""></div>
+                            <p><a href="">골드킹</a></p>
+                        </li>
+                        <li>
+                            <div><img src="img/chicken/MatchoKing.png" alt=""></div>
+                            <p><a href="">싸이순살</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnR">&gt;</div>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="btnL"><i class="fa-solid fa-caret-left"></i></div>
+            <div class="box3_inner">
+
+                <div class="box3-1">
+                    <div class="img">
+                        <div class="img_big">
+                            <img src="img/chicken/Kwaksakking_1.png" alt="">
+                        </div>
+                        <div class="img_small">
+                            <ul>
+                                <li><img src="img/chicken/Kwaksakking_2.png" alt=""></li>
+                                <li><img src="img/chicken/Kwaksakking_3.png" alt=""></li>
+                                <li><img src="img/chicken/Kwaksakking_4.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img_intro">
+                        <div class="intro_txt">
+                            <em>New</em>
+                            <h3>콱삭킹</h3>
+                            <p>바삭한 치킨에 매콤달콤한 특제 소스를 입힌 BHC의 최신 인기 메뉴입니다.</p>
+                        </div>
+                        <ul class="intro_btn">
+                            <li>
+                                <a href="">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                    <!-- <i class="fa-regular fa-heart"></i> -->
+                                    장바구니
+                                </a>
+                            </li>
+                            <li><a href="">지금 구매하기</a></li>
+                        </ul>
+                        <div class="intro_rating">
+                            <ul class="rating_icon">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <div class="rating_txt">
+                                <em>4.6</em>
+                                <span>10,000 review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box3-2">
+                    <div class="Review">
+                        <h2>Top review</h2>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-quote-right"></i>
+                                <p>바삭한 식감과 매콤달콤한 소스가 중독성이 있어요.</p>
+                                <span>- 치킨러버</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-quote-right"></i>
+                                <p>처음 먹어봤는데, 양념이 적당하고 감칠맛이있어요.</p>
+                                <span>- 매콤한입</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-quote-right"></i>
+                                <p>간식으로도 좋고,식사로도 만족스러운 치킨이에요.</p>
+                                <span>- 바삭바삭</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <p class="btn_txt">콱삭킹을 먹어보셨나요? 리뷰를 작성하려면 BHC 앱을 다운로드하세요!</p>
+                    <p class="btn">
+                        <a href="">앱 다운로드하기</a>
+                    </p>
+                </div>
+
+            </div>
+            <div class="btnR"><i class="fa-solid fa-caret-right"></i></div>
+        </div>
+        <div class="box4">
+            <div class="box4-1">
+                <h2>Menu</h2>
                 <ul>
-                    <li><img src="img/Lamp/Lamp1.png" alt=""></li>
                     <li>
-                        <img src="img/Lamp/Lamp2.png" alt="">
-                        <img class="light" src="img/Lamp/Lamplight.png" alt="">
+                        <a href="">
+                            <img src="img/menu/cheeseball" alt="감자튀김">
+                            <p>사이드</p>
+                        </a>
                     </li>
-                    <li><img src="img/Lamp/Lamp1.png" alt=""></li>
+                    <li>
+                        <a href="">
+                            <img src="img/menu/Chicken & Coke combo cup.png" alt="콜라 컵과 치킨이 담긴 사이드 메뉴">
+                            <p>콜팝</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/menu/Fried.png" alt="치킨 한 조각">
+                            <p>치킨</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/menu/pizza.png" alt="피자 한 조각">
+                            <p>피자</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/menu/Roasted dried pollock.png" alt="황태구이 안주">
+                            <p>안주류</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div class="btn">
-                전체보기
-                <i class="fa-solid fa-chevron-right"></i>
-            </div>
-        </div>
-        <div class="box2-2">
-            <div class="btnL">&lt;</div>
-            <ul>
-                <li>
-                    <div><img src="img/chicken/Bburinkle.png" alt=""></div>
-                    <p><a href="">뿌링클</a></p>
-                </li>
-                <li>
-                    <div><img src="img/chicken/Kwaksakking_1.png" alt=""></div>
-                    <p><a href="">콱삭킹</a></p>
-                </li>
-                <li>
-                    <div><img src="img/chicken/MatchoKing.png" alt=""></div>
-                    <p><a href="">맛초킹</a></p>
-                </li>
-            </ul>
-            <div class="btnR">&gt;</div>
-        </div>
-    </div>
-    <div class="box3">
-        <div class="btnL"><i class="fa-solid fa-caret-left"></i></div>
-        <div class="box3_inner">
-
-            <div class="box3-1">
-                <div class="img">
-                    <div class="img_big">
-                        <img src="img/chicken/Kwaksakking_1.png" alt="">
-                    </div>
-                    <div class="img_small">
-                        <ul>
-                            <li><img src="img/chicken/Kwaksakking_2.png" alt=""></li>
-                            <li><img src="img/chicken/Kwaksakking_3.png" alt=""></li>
-                            <li><img src="img/chicken/Kwaksakking_4.png" alt=""></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="img_intro">
-                    <div class="intro_txt">
-                        <em>New</em>
-                        <h3>콱삭킹</h3>
-                        <p>바삭한 치킨에 매콤달콤한 특제 소스를 입힌 BHC의 최신 인기 메뉴입니다.</p>
-                    </div>
-                    <ul class="intro_btn">
-                        <li>
-                            <a href="">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <!-- <i class="fa-regular fa-heart"></i> -->
-                                장바구니
-                            </a>
-                        </li>
-                        <li><a href="">지금 구매하기</a></li>
-                    </ul>
-                    <div class="intro_rating">
-                        <ul class="rating_icon">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                        </ul>
-                        <div class="rating_txt">
-                            <em>4.6</em>
-                            <span>10,000 review</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box3-2">
-                <div class="Review">
-                    <h2>Top review</h2>
-                    <ul>
-                        <li>
-                            <i class="fa-solid fa-quote-right"></i>
-                            <p>바삭한 식감과 매콤달콤한 소스가 중독성이 있어요.</p>
-                            <span>- 치킨러버</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-quote-right"></i>
-                            <p>처음 먹어봤는데, 양념이 적당하고 감칠맛이있어요.</p>
-                            <span>- 매콤한입</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-quote-right"></i>
-                            <p>간식으로도 좋고,식사로도 만족스러운 치킨이에요.</p>
-                            <span>- 바삭바삭</span>
-                        </li>
-
-                    </ul>
-                </div>
-                <p class="btn_txt">콱삭킹을 먹어보셨나요? 리뷰를 작성하려면 BHC 앱을 다운로드하세요!</p>
+            <div class="box4-2">
+                <h2>BHC</h2>
+                <p class="txt1">
+                    BHC와 함께한 바삭한 순간이 있나요?
+                </p>
+                <p class="txt2">
+                    "치킨 한 조각이면 충분해.
+                    <br>
+                    기분전환, BHC로!"
+                </p>
                 <p class="btn">
-                    <a href="">앱 다운로드하기</a>
+                    <a href="">
+                        브랜드스토리
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </p>
             </div>
-
         </div>
-        <div class="btnR"><i class="fa-solid fa-caret-right"></i></div>
-    </div>
-    <div class="box4">
-        <div class="box4-1">
-            <h2>Menu</h2>
-            <ul>
-                <li>
-                    <a href="">
-                        <img src="img/menu/french fries.png" alt="감자튀김">
-                        <p>사이드</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/menu/Chicken & Coke combo cup.png" alt="콜라 컵과 치킨이 담긴 사이드 메뉴">
-                        <p>콜팝</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/menu/Fried.png" alt="치킨 한 조각">
-                        <p>치킨</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/menu/pizza.png" alt="피자 한 조각">
-                        <p>피자</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/menu/Roasted dried pollock.png" alt="황태구이 안주">
-                        <p>안주류</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="box4-2">
-            <h2>BHC</h2>
-            <p class="txt1">
-                BHC와 함께한 바삭한 순간이 있나요?
-            </p>
-            <p class="txt2">
-                "치킨 한 조각이면 충분해.
-                <br>
-                기분전환, BHC로!"
-            </p>
-            <p class="btn">
-                <a href="">
-                    브랜드스토리
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </p>
-        </div>
-    </div>
-    <div class="box5">
-        <h2>
-            <i class="fa-solid fa-flag"></i>
-            <em>bhc</em>
-            <p>HISTORY</p>
-        </h2>
-        <div class="box5_inner">
-            <div class="HISTORY chic1">
-                <div class="content-group_1">
-                    <img class="img_img" src="img/chicken/Bburinkle.png" alt="2014년 출시된 뿌링클 치킨">
-                    <h3>2014</h3>
-                </div>
-                <div class="content-group_2">
-                    <div class="img_txt">
-                        <h4>뿌링클</h4>
-                        <p>뿌링클은 겉은 바삭하고 달콤짭짤한<br>
-                            시즈닝이 더해진 치킨으로, 중독성<br>
-                            있는 맛이 특징입니다.
-                        </p>
-                        <div class="img_btn">
-                            <p><a href=""><i class="fa-solid fa-basket-shopping"></i>장바구니</a></p>
-                            <p><a href="">지금 구매하기</a></p>
-                        </div>
+        <div class="box5 brand">
+            <h2>
+                <i class="fa-solid fa-flag"></i>
+                <em>bhc</em>
+                <p>HISTORY</p>
+            </h2>
+            <div class="box5_inner">
+                <div class="HISTORY chic1">
+                    <div class="content-group_1">
+                        <img class="img_img" src="img/chicken/Bburinkle.png" alt="2014년 출시된 뿌링클 치킨">
+                        <h3>2014</h3>
                     </div>
-                </div>
-            </div>
-            <div class="HISTORY chic2">
-                <div class="content-group_1">
-                    <h3>2016</h3>
-                    <img class="img_img" src="img/chicken/MatchoKing.png" alt="2016년 출시된 맛초킹 치킨">
-                </div>
-                <div class="content-group_2">
-                    <div class="img_txt">
-                        <h4>맛초킹</h4>
-                        <p>맛초킹은 매콤달콤한 양념이 입혀진<br>
-                            BHC의 인기 치킨 메뉴로, 감칠맛과<br>
-                            매콤함이 조화를 이루는 치킨입니다.
-                        </p>
-                        <div class="img_btn">
-                            <p><a href=""><i class="fa-solid fa-basket-shopping"></i>장바구니</a></p>
-                            <p><a href="">지금 구매하기</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="HISTORY chic3">
-                <div class="content-group_1">
-                    <img class="img_img" src="img/chicken/HOTBburinkle.png" alt="2019년 출시된 뿌링 핫 치킨">
-                    <h3>2019</h3>
-                </div>
-                <div class="content-group_2">
-                    <div class="img_txt">
-                        <h4>뿌링 핫</h4>
-                        <p>뿌링핫은 바삭한 치킨 위에 매콤달콤한<br>
-                            시즈닝을 더한 BHC의 인기 스페셜<br>
-                            메뉴입니다.
-                        </p>
-                        <div class="img_btn">
-                            <p>
-                                <a href="">
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                    장바구니
-                                </a>
+                    <div class="content-group_2">
+                        <div class="img_txt">
+                            <h4>뿌링클</h4>
+                            <p>뿌링클은 겉은 바삭하고 달콤짭짤한<br>
+                                시즈닝이 더해진 치킨으로, 중독성<br>
+                                있는 맛이 특징입니다.
                             </p>
-                            <p><a href="">지금 구매하기</a></p>
+                            <div class="img_btn">
+                                <p><a href=""><i class="fa-solid fa-basket-shopping"></i>장바구니</a></p>
+                                <p><a href="">지금 구매하기</a></p>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
-            <div class="HISTORY chic4">
-                <div class="content-group_1">
-                    <h3>2020</h3>
-                    <img class="img_img" src="img/chicken/Ssai Sunsal.png" alt="2020년 출시된 싸이순살 치킨">
-                </div>
-                <div class="content-group_2">
-                    <div class="img_txt">
-                        <h4>싸이순살</h4>
-                        <p>
-                            이순살은 부드러운 순살 치킨에<br>
-                            달콤하고 짭짤한 양념을 입힌<br>
-                            BHC의 인기 메뉴입니다.
-                        </p>
-                        <div class="img_btn">
-                            <p>
-                                <a href="">
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                    장바구니
-                                </a>
+                <div class="HISTORY chic2">
+                    <div class="content-group_1">
+                        <h3>2016</h3>
+                        <img class="img_img" src="img/chicken/MatchoKing.png" alt="2016년 출시된 맛초킹 치킨">
+                    </div>
+                    <div class="content-group_2">
+                        <div class="img_txt">
+                            <h4>맛초킹</h4>
+                            <p>맛초킹은 매콤달콤한 양념이 입혀진<br>
+                                BHC의 인기 치킨 메뉴로, 감칠맛과<br>
+                                매콤함이 조화를 이루는 치킨입니다.
                             </p>
-                            <p><a href="">지금 구매하기</a></p>
+                            <div class="img_btn">
+                                <p><a href=""><i class="fa-solid fa-basket-shopping"></i>장바구니</a></p>
+                                <p><a href="">지금 구매하기</a></p>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
-            <div class="HISTORY chic5">
-                <div class="content-group_1">
-                    <img class="img_img" src="img/chicken/Gold King.png" alt="2021년 출시된 골드킹 치킨">
-                    <h3>2021</h3>
-                </div>
-                <div class="content-group_2">
-                    <div class="img_txt">
-                        <h4>골드킹</h4>
-                        <p>골드킹은 바삭한 후라이드 치킨에<br>
-                            고소하고 풍부한 양념을 더한 <br>
-                            BHC의 인기 메뉴입니다.</p>
-                        <div class="img_btn">
-                            <p>
-                                <a href="">
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                    장바구니
-                                </a>
+                <div class="HISTORY chic3">
+                    <div class="content-group_1">
+                        <img class="img_img" src="img/chicken/HOTBburinkle.png" alt="2019년 출시된 뿌링 핫 치킨">
+                        <h3>2019</h3>
+                    </div>
+                    <div class="content-group_2">
+                        <div class="img_txt">
+                            <h4>뿌링 핫</h4>
+                            <p>뿌링핫은 바삭한 치킨 위에 매콤달콤한<br>
+                                시즈닝을 더한 BHC의 인기 스페셜<br>
+                                메뉴입니다.
                             </p>
-                            <p><a href="">지금 구매하기</a></p>
+                            <div class="img_btn">
+                                <p>
+                                    <a href="">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        장바구니
+                                    </a>
+                                </p>
+                                <p><a href="">지금 구매하기</a></p>
+                            </div>
                         </div>
+
                     </div>
-
                 </div>
-
-            </div>
-            <div class="HISTORY chic6">
-                <div class="content-group_1">
-                    <h3>2025</h3>
-                    <img class="img_img" src="img/chicken/Kwaksakking_1.png" alt="2025년 출시된 콱삭킹 치킨">
-                </div>
-                <div class="content-group_2">
-                    <div class="img_txt">
-                        <h4>콱삭킹</h4>
-                        <p>콰삭킹은 바삭한 치킨에 매콤달콤한<br>
-                            특제 소스를 입힌 BHC의 최신 <br>
-                            인기 메뉴입니다.</p>
-                        <div class="img_btn">
+                <div class="HISTORY chic4">
+                    <div class="content-group_1">
+                        <h3>2020</h3>
+                        <img class="img_img" src="img/chicken/Ssai Sunsal.png" alt="2020년 출시된 싸이순살 치킨">
+                    </div>
+                    <div class="content-group_2">
+                        <div class="img_txt">
+                            <h4>싸이순살</h4>
                             <p>
-                                <a href="">
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                    장바구니
-                                </a>
+                                이순살은 부드러운 순살 치킨에<br>
+                                달콤하고 짭짤한 양념을 입힌<br>
+                                BHC의 인기 메뉴입니다.
                             </p>
-                            <p><a href="">지금 구매하기</a></p>
+                            <div class="img_btn">
+                                <p>
+                                    <a href="">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        장바구니
+                                    </a>
+                                </p>
+                                <p><a href="">지금 구매하기</a></p>
+                            </div>
                         </div>
+
+                    </div>
+                </div>
+                <div class="HISTORY chic5">
+                    <div class="content-group_1">
+                        <img class="img_img" src="img/chicken/Gold King.png" alt="2021년 출시된 골드킹 치킨">
+                        <h3>2021</h3>
+                    </div>
+                    <div class="content-group_2">
+                        <div class="img_txt">
+                            <h4>골드킹</h4>
+                            <p>골드킹은 바삭한 후라이드 치킨에<br>
+                                고소하고 풍부한 양념을 더한 <br>
+                                BHC의 인기 메뉴입니다.</p>
+                            <div class="img_btn">
+                                <p>
+                                    <a href="">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        장바구니
+                                    </a>
+                                </p>
+                                <p><a href="">지금 구매하기</a></p>
+                            </div>
+                        </div>
+
                     </div>
 
+                </div>
+                <div class="HISTORY chic6">
+                    <div class="content-group_1">
+                        <h3>2025</h3>
+                        <img class="img_img" src="img/chicken/Kwaksakking_1.png" alt="2025년 출시된 콱삭킹 치킨">
+                    </div>
+                    <div class="content-group_2">
+                        <div class="img_txt">
+                            <h4>콱삭킹</h4>
+                            <p>콰삭킹은 바삭한 치킨에 매콤달콤한<br>
+                                특제 소스를 입힌 BHC의 최신 <br>
+                                인기 메뉴입니다.</p>
+                            <div class="img_btn">
+                                <p>
+                                    <a href="">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        장바구니
+                                    </a>
+                                </p>
+                                <p><a href="">지금 구매하기</a></p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="box6">
-        <div class="solar-system">
-            <!-- 궤도 원들 -->
-            <div class="orbit orbit-1">
-                <div class="planet usa">
-                    <img src="img/Planet/US.png" alt="BHC치즈볼 닮은 미국">
-                    <div class="planet-text">미국<br>3곳</div>
-                    <div class="planet-info">United States - 3 stores</div>
+        <div class="box6">
+            <div class="solar-system">
+                <!-- 궤도 원들 -->
+                <div class="orbit orbit-1">
+                    <div class="planet usa">
+                        <img src="img/Planet/US.png" alt="BHC치즈볼 닮은 미국">
+                        <div class="planet-text">미국<br>3곳</div>
+                        <div class="planet-info">United States - 3 stores</div>
+                    </div>
                 </div>
-            </div>
-            <div class="orbit orbit-2">
-                <div class="planet canada">
-                    <img src="img/Planet/Canada.png" alt="BHC치즈볼 닮은 캐나다">
-                    <div class="planet-text">캐나다<br>1곳</div>
-                    <div class="planet-info">Canada - 1 store</div>
+                <div class="orbit orbit-2">
+                    <div class="planet canada">
+                        <img src="img/Planet/Canada.png" alt="BHC치즈볼 닮은 캐나다">
+                        <div class="planet-text">캐나다<br>1곳</div>
+                        <div class="planet-info">Canada - 1 store</div>
+                    </div>
                 </div>
-            </div>
-            <div class="orbit orbit-3">
-                <div class="planet hongkong">
-                    <img src="img/Planet/HongKong.png" alt="BHC치즈볼 닮은 홍콩">
-                    <div class="planet-text">홍콩<br>2곳</div>
-                    <div class="planet-info">Hong Kong - 2 stores</div>
+                <div class="orbit orbit-3">
+                    <div class="planet hongkong">
+                        <img src="img/Planet/HongKong.png" alt="BHC치즈볼 닮은 홍콩">
+                        <div class="planet-text">홍콩<br>2곳</div>
+                        <div class="planet-info">Hong Kong - 2 stores</div>
+                    </div>
                 </div>
-            </div>
-            <div class="orbit orbit-4">
-                <div class="planet thailand">
-                    <img src="img/Planet/Thailand.png" alt="BHC치즈볼 닮은 태국">
-                    <div class="planet-text">태국<br>11곳</div>
-                    <div class="planet-info">Thailand - 11 stores</div>
+                <div class="orbit orbit-4">
+                    <div class="planet thailand">
+                        <img src="img/Planet/Thailand.png" alt="BHC치즈볼 닮은 태국">
+                        <div class="planet-text">태국<br>11곳</div>
+                        <div class="planet-info">Thailand - 11 stores</div>
+                    </div>
                 </div>
-            </div>
-            <div class="orbit orbit-5">
-                <div class="planet malaysia">
-                    <img src="img/Planet/Malaysia.png" alt="BHC치즈볼 닮은 말레이시아">
-                    <div class="planet-text">말레이시아<br>2곳</div>
-                    <div class="planet-info">Malaysia - 2 stores</div>
+                <div class="orbit orbit-5">
+                    <div class="planet malaysia">
+                        <img src="img/Planet/Malaysia.png" alt="BHC치즈볼 닮은 말레이시아">
+                        <div class="planet-text">말레이시아<br>2곳</div>
+                        <div class="planet-info">Malaysia - 2 stores</div>
+                    </div>
                 </div>
-            </div>
-            <div class="orbit orbit-6">
-                <div class="planet singapore">
-                    <img src="img/Planet/Singapore.png" alt="BHC치즈볼 닮은 싱가포르">
-                    <div class="planet-text">싱가포르<br>1곳</div>
-                    <div class="planet-info">Singapore - 1 store</div>
+                <div class="orbit orbit-6">
+                    <div class="planet singapore">
+                        <img src="img/Planet/Singapore.png" alt="BHC치즈볼 닮은 싱가포르">
+                        <div class="planet-text">싱가포르<br>1곳</div>
+                        <div class="planet-info">Singapore - 1 store</div>
+                    </div>
                 </div>
-            </div>
-            <div class="orbit orbit-7">
-                <div class="planet korea">
-                    <img src="img/Planet/SouthKorea.png" alt="BHC치즈볼 닮은 한국">
-                    <div class="planet-text">한국<br>2,177곳</div>
-                    <div class="planet-info">South Korea - 2,177 stores</div>
+                <div class="orbit orbit-7">
+                    <div class="planet korea">
+                        <img src="img/Planet/SouthKorea.png" alt="BHC치즈볼 닮은 한국">
+                        <div class="planet-text">한국<br>2,177곳</div>
+                        <div class="planet-info">South Korea - 2,177 stores</div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- 중앙 지구 (BHC World) -->
-            <div class="earth">
-                <img src="img/Planet/Earth.png" alt="BHC치즈볼 닮은 지구">
-                <div class="bhc-text">BHC</div>
-                <div class="world-text">world</div>
+                <!-- 중앙 지구 (BHC World) -->
+                <div class="earth">
+                    <img src="img/Planet/Earth.png" alt="BHC치즈볼 닮은 지구">
+                    <div class="bhc-text">BHC</div>
+                    <div class="world-text">world</div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="box7">
-        <div class="Uvid">
-            <ul class="track">
-                <li class="slide">
-                    <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/x896nvB9OwY?si=wf7hgs9dn0XyKQpA" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/동영상ID2"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe> -->
-                </li>
-                </li>
-                <li class="slide is-active">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_EBBSpbzrpk?si=NcyVC9aFzjLLRhk6"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/동영상ID2"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe> -->
-                </li>
-                </li>
-                <li class="slide"><iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/sqS6zXH2-04?si=-KhEhIv4GUqxc_Zt" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/동영상ID2"
+        <div class="box7">
+            <div class="Uvid">
+                <ul class="track">
+                    <li class="slide">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/x896nvB9OwY?si=wf7hgs9dn0XyKQpA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/동영상ID2"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe> -->
-                </li>
-                </li>
-            </ul>
-        </div>
-        <div class="dots">
-            <button aria-label="1번" class="on"></button>
-            <button aria-label="2번"></button>
-            <button aria-label="3번"></button>
-        </div>
-
-    </div>
-    <div class="box8">
-        <div class="box8_inner">
-            <h2>NEWS</h2>
-            <ul class="info_menu">
-                <li><a href="">매뉴1</a></li>
-                <li><a href="">매뉴2</a></li>
-                <li><a href="">매뉴3</a></li>
-            </ul>
-            <div class="info">
-                <span>BHC</span>
-                <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    </li>
+                    </li>
+                    <li class="slide is-active">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/_EBBSpbzrpk?si=NcyVC9aFzjLLRhk6"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/동영상ID2"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe> -->
+                    </li>
+                    </li>
+                    <li class="slide"><iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/sqS6zXH2-04?si=-KhEhIv4GUqxc_Zt"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/동영상ID2"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe> -->
+                    </li>
+                    </li>
                 </ul>
             </div>
-            <div class="info_btn">
-                <a href="">
-                    전체보기
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="dots">
+                <button aria-label="1번" class="on"></button>
+                <button aria-label="2번"></button>
+                <button aria-label="3번"></button>
+            </div>
+
+        </div>
+        <div class="box8">
+            <div class="box8_inner">
+                <h2>NEWS</h2>
+                <ul class="info_menu">
+                    <li><a href="">매뉴1</a></li>
+                    <li><a href="">매뉴2</a></li>
+                    <li><a href="">매뉴3</a></li>
+                </ul>
+                <div class="info">
+                    <span>BHC</span>
+                    <ul>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="info_btn">
+                    <a href="">
+                        전체보기
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="box9">
-        <div>
-            <p>본 페이지는 포트폴리오용으로 제작된 사이트 입니다.
-                해당사이트의 이미지와 동영상 기타 상세내용은 상업용으로 사용하지 않습니다.
-            </p>
-            <p>
-                copyright ⓒ 2025.green310. All Rights Reserved.
-            </p>
-        </div>
+
+    <div id="sub01">
+        <!-- 서브페이지1번입니다. -->
     </div>
 
-
-
+    <div class="footer">
+        <div>
+            <p>본 페이지는 포트폴리오용으로 제작된 사이트 입니다.
+                해당사이트의 이미지와 동영상 기타 상세내용은 상업용으로 사용하지 않습니다.</p>
+            <p>copyright ⓒ 2025.green310. All Rights Reserved.</p>
+        </div>
+    </div>
 
 </body>
 
