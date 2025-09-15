@@ -56,7 +56,7 @@
 - **Swiper** 슬라이드, **탭메뉴**, **모달창** 구현
 
 ### 🚀 링크
-- [디자인 시안](링크)
+- [디자인 시안](https://www.figma.com/design/MQ324aJ0NOVTKK5M4JhjOt/bhc-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A6%AC%EB%89%B4%EC%96%BC?node-id=73-51&t=OsbXCsa1DCaXBBiJ-1)
 - [코드 저장소](링크)
 - [배포 사이트](링크)
 
