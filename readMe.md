@@ -40,7 +40,7 @@
 ### 👀 페이지 미리보기
 | 메인 | 서브 | |
 |-----|------|--|
-| ![메인](<img width="3000" height="2000" alt="186" src="https://github.com/user-attachments/assets/575f0044-4013-488a-9c33-0a48e3f6284c" />) | ![서브](이미지주소) |
+| ![메인]() | ![서브](이미지주소) |
 
 ---
 
@@ -58,12 +58,12 @@
 ### 🚀 링크
 - [디자인 시안](https://www.figma.com/design/MQ324aJ0NOVTKK5M4JhjOt/bhc-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A6%AC%EB%89%B4%EC%96%BC?node-id=73-51&t=OsbXCsa1DCaXBBiJ-1)
 - [코드 저장소](링크)
-- [배포 사이트](링크)
+- [배포 사이트](https://dlwldms58.github.io/portfolio2025/project002/)
 
 ### 👀 페이지 미리보기
 | 메인 페이지 | 상품 상세 페이지 |
 |------------|----------------|
-| ![메인](이미지주소) | ![상품](이미지주소) |
+| ![메인](project002/mockup/project002_mockup.png) | ![상품](이미지주소) |
 
 ---
 
