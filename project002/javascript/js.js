@@ -22,6 +22,13 @@ $(document).ready(function () {
     });
 
 
+    $('#shopping_popUp').on('click', function () {
+        $(this).closest('.shopping').removeClass('on');
+    });
+
+
+
+
     // 인기매뉴 캐러셀
 
     let ti = 0;
@@ -82,6 +89,66 @@ $(document).ready(function () {
     });
 
 
+    // ============================
+    // BOX5 타임라인 패럴랙스 스크롤 리빌
+    // ============================
+    // 모든 HISTORY 섹션을 선택
+    let historySections = $('.box5_inner .HISTORY');
+
+    // 1️⃣ 초기 상태: 좌우로 살짝 숨기기
+    historySections.each(function (index) {
+        let groupLeft = $(this).find('.content-group_1');
+        let groupRight = $(this).find('.content-group_2');
+        let isOddSection = index % 2 === 0; // 홀짝 판단 (짝수 index = 왼→오)
+
+        // 기본 스타일 (투명 + 좌우 오프셋)
+        groupLeft.css({ opacity: 0, position: 'relative' });
+        groupRight.css({ opacity: 0, position: 'relative' });
+
+        if (isOddSection) {
+            // 홀수번째(시각적으로 왼쪽 이미지)
+            groupLeft.css({ left: -160 });
+            groupRight.css({ left: 160 });
+        } else {
+            // 짝수번째(시각적으로 오른쪽 이미지)
+            groupLeft.css({ left: 160 });
+            groupRight.css({ left: -160 });
+        }
+    });
+
+    // 2️⃣ 스크롤 시 나타나기
+    function showHistoryOnScroll() {
+        let scrollY = $(window).scrollTop();
+        let windowH = $(window).height();
+        let triggerPoint = scrollY + windowH * 0.8; // 화면 하단 20% 지점
+
+        historySections.each(function () {
+            let currentSection = $(this);
+            let sectionTop = currentSection.offset().top;
+
+            // 이미 나타난 섹션은 스킵
+            if (currentSection.data('visible')) return;
+
+            // 뷰포트 안에 들어오면 등장
+            if (triggerPoint > sectionTop) {
+                currentSection.data('visible', true);
+
+                let groupLeft = currentSection.find('.content-group_1');
+                let groupRight = currentSection.find('.content-group_2');
+
+                // 자연스러운 시간차 애니메이션
+                groupLeft.stop(true).animate({ opacity: 1, left: 0 }, 700, 'swing');
+                groupRight.stop(true).delay(150).animate({ opacity: 1, left: 0 }, 700, 'swing');
+            }
+        });
+    }
+
+    // 이벤트 등록
+    $(window).on('scroll.historyReveal resize.historyReveal', showHistoryOnScroll);
+    showHistoryOnScroll(); // 페이지 로드 시 초기 실행
+
+
+
 
 
     // 서브페이지연결하기
@@ -90,9 +157,59 @@ $(document).ready(function () {
         .eq(0)
         .click(function (e) {
             e.preventDefault();
-            $("#wrap").fadeOut();
+            $("#wrap, #login").fadeOut();
             $("#sub01").fadeIn();
+            $(".shopping").removeClass("on");
         });
+
+
+
+
+    // ---------------- 로그인 페이지 열기 ----------------
+    $(".util li")
+        .eq(1)
+        .click(function (e) {
+            e.preventDefault();
+            $(".shopping").removeClass("on");
+            $("#sub01").fadeOut();
+            $("#login").fadeIn();
+            $("body").addClass("no-scroll");   // ★ 스크롤 잠금
+        });
+
+    $(".util li")
+        .eq(3)
+        .click(function (e) {
+            e.preventDefault();
+            $(".shopping").removeClass("on");
+            $("#sub01").fadeOut();
+            $("#login").fadeIn();
+            $("body").addClass("no-scroll");   // ★ 스크롤 잠금
+        });
+
+    // ---------------- 로그인 페이지 닫기 ----------------
+    $(".loginClose").click(function (e) {
+        e.preventDefault();
+        $("#login").fadeOut();
+        $("#wrap").fadeIn();
+        $("body").removeClass("no-scroll");  // ★ 스크롤 해제
+    });
+
+    // (선택) 바깥(검은 배경) 클릭 시 닫기
+    $("#login").on("click", function (e) {
+        if ($(e.target).is("#login")) {
+            $("#login").fadeOut();
+            $("#wrap").fadeIn();
+            $("body").removeClass("no-scroll"); // ★ 스크롤 해제
+        }
+    });
+
+    // 서브페이지로 갈 때 혹시 잠금 풀기(안전장치)
+    $(".logo, .gnb li").on("click", function () {
+        $("body").removeClass("no-scroll");
+    });
+
+
+
 
 
 
