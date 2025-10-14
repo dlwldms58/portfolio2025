@@ -2,80 +2,457 @@
 @charset 'UTF-8';
 
 /* 전체설정 */
-* {margin: 0;
-    padding: 0;}
-a {text-decoration: none;
-    color: #000;}
-ul,ol {list-style: none;}
-img {border: 0;
-    vertical-align: bottom;}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: bottom;
+}
 
 /* 헤더가로정렬 */
-.boxA{display: flex;}
-.boxA-1{width: 20%;}
-.boxA-2{width: 80%;}
+.boxA {
+    width: 100%;
+}
+
+.boxA_inner {
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+.boxA-1 {
+    width: 20%;
+}
+
+.boxA-2 {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
 
 
- /* 전체wrap 설정 */
-.boxB {display: flex;
-      flex-wrap: wrap;}
-.box1{width: 100%;}
-.box2{width: 70%;}
-.box3{width: 30%;}
-.box4{width: 100%;}
-.box5{width: 100%;}
-.box6{width: 100%;}
-.box7{width: 100%;}
-.box8{width: 100%;}
-.box9{width: 100%;}
-.box10{width: 100%;}
-.box11{width: 100%;}
+
+/* 전체wrap 설정 */
+.boxB {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.landing {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.box1 {
+    width: 100%;
+}
+
+.box23 {
+    width: 100%;
+}
+
+
+.box4 {
+    width: 100%;
+}
+
+.box5 {
+    width: 100%;
+}
+
+.box6 {
+    width: 100%;
+}
+
+.box7 {
+    width: 100%;
+}
+
+.box8 {
+    width: 100%;
+}
+
+.box9 {
+    width: 100%;
+}
+
+.box10 {
+    width: 100%;
+}
+
+.box11 {
+    width: 100%;
+}
 
 
 /* 전체 레이아웃 설정 */
 
+
+/* 박스B 해더 아래로 내려보내기 */
+.boxB {}
+
+/* 랜딩페이지 설정 */
+.landing {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.box1 {
+    width: 100%;
+}
+
+.box23 {}
+
+.box2 {
+    margin-right: 20px;
+}
+
+.box3 {
+    width: 30%;
+}
+
+.box3-inner {
+    height: 100%;
+}
+
+.box3-1 {
+    height: calc(20% - 10px);
+    margin-bottom: 10px;
+}
+
+.box3-2 {
+    height: 80%;
+}
+
+.box3-1-1 {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+
+.box3-1-2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+.box4 {}
+
+.box4-1 {}
+
+.box4-2 {}
+
+.review {
+    display: flex;
+}
+
+
+
+/* 공지사항 가로정렬 */
+.box1 {
+    display: flex;
+}
+
+
+
+/* 운영시간 및 요금 가로정렬 */
+.box3-1 {
+    display: flex;
+}
+
+/* 리뷰 가로정렬 */
+.box4 {}
+
+.box4-1 {
+    display: flex;
+}
+
+.box4-2 {
+    display: flex;
+}
+
 /* 세부시설 가로정렬 */
-.box8 {display: flex;}
-.box8-1 {width:30%;}
-.box8-2 {width:70%;}
+.box8 {
+    display: flex;
+}
+
+.box8-1 {
+    width: 30%;
+}
+
+.box8-2 {
+    width: 70%;
+}
 
 /* 찾아오시는 길 가로정렬 */
-.box10 {display: flex;}
-.box10-1 {width: 70%;}
-.box10-2 {width: 30%;}
+.box10 {
+    display: flex;
+}
+
+.box10-1 {
+    width: 70%;
+}
+
+.box10-2 {
+    width: 30%;
+
+}
 
 /* 자주하시는 질문 가로 정렬 */
-.box11 {display: flex;}
-.box11-1 {width: 50%;}
-.box11-2 {width: 50%;}
+.box11 {
+    display: flex;
+}
+
+.box11-1 {
+    width: 50%;
+}
+
+.box11-2 {
+    width: 50%;
+}
 
 
 
+/* 상세설정!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* 헤더고정시키기 */
+.boxA {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(45deg, #0873FE, #03E3FF);
+    display: flex;
+    /* 추가 */
+    justify-content: center;
+    /* 가로 중앙 */
+    align-items: center;
+    /*자식 자체를 세로 중앙에 둘 필요가 있으면 사용*/
+}
+
+.boxA_inner {
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 24px; */
+}
+
+/* 로고설정 */
+.boxA-1 {}
+
+.boxA-1 h1 {}
+
+.boxA-1 h1 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxA-1 h1 a:hover {
+    opacity: 0.7;
+}
+
+.boxA-1 h1 a img {}
+
+
+/* gnb 설정 */
+.boxA-2 {
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxA-2 .gnb {}
+
+.boxA-2 .gnb ul {
+    display: flex;
+    gap: 50px;
+    /* padding-right: 200p  x; */
+    /* background-color: #eee; */
+}
+
+.boxA-2 .gnb ul li {}
+
+.boxA-2 .gnb ul li a {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    /* background-color: #03E3FF; */
+}
+
+.boxA-2 .util {
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    width: 35px;
+    height: 15px;
+    margin-top: -15px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxA-2 .util a {
+    color: #fff;
+    font-size: 15px;
+}
 
 
 
+/* 콘텐츠가 헤더 뒤에 가려지지 않도록 상단 여백 보정 */
+.boxB {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.landing {
+    width: 100%;
+    padding-top: 100px;
+    /* 헤더 높이와 동일하게 */
+}
 
 
+.landing .box1 {
+    width: 100%;
+    height: 50px;
+    background-color: #eee;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.landing .box1>span {
+    background-color: #6099F8;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
+.landing .box1 .notice {
+    margin: 0 20px;
+}
 
-     
-        /* 미디어쿼리구간########################################################################### */
+.landing .box23 {
+    width: 100%;
+    display: flex;
+}
 
-        /* 모바일구간 */
-        @media(max-width:599px){
+.landing .box23 .box2 {
+    width: calc(70% - 20px);
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
+.landing .box23 .box3 {
+    width: 30%;
+    /* background-color: #0873FE; */
+}
 
-        }/*599px 이하 설정완료 구간*/
+.landing .box2>.btnL {
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: (50% 50%);
+}
 
-        /* 태블릿구간 */
-        @media(min-width:768px){
+.landing .box2>.btnL img {
+    width: 100%;
+}
 
+.landing .box2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0873FE;
+    border-radius: 20px;
+    width: 100%;
+    height: 600px;
+}
 
-        }/*768px이상 설정완료 구간*/
+.landing .box2 p a {}
 
-        /* PC용 구간 */
-        @media(min-width:960px){
+.landing .box2 p a img {
 
-            
-        }
+    width: 100%;
+}
+
+.landing .box2>.btnR {
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: (50% 50%);
+}
+
+.landing .box2>.btnR img {
+    width: 100%;
+}
+
+/* ------- 박스3 - 운영시간, 요금, 예약 설정하기 ---- */
+
+.box3 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0873FE; */
+    
+}
+.box3 .box3-inner{
+ background-color: #03E3FF;
+}
+
+/* 운영시간, 요금 설정 */
+.box3-1 {}
+.box3-1 .Time {
+    background-color: #F7F8FB;
+}
+

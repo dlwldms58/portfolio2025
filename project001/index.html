@@ -1,351 +1,365 @@
 <!DOCTYPE html>
-<html lang="ko">
+
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design & Code Portfolio</title>
-    <!-- 스타일시트 연결 -->
-    <link rel="stylesheet" href="style.css">
+    <title>대전아쿠아리움웹사이트</title>
+    <!-- 그리드 가이드 연결 -->
+    <!-- <link rel="stylesheet" href="css/grid-guide.css"> -->
+    <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
 
+
+    <style>
+        .ui-datepicker {
+            width: 350px;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="water-bg"></div>
-    <div class="water-caustics"></div>
-    <div class="floating-elements">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
-
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li class="logo"><a href="#home"><img src="landing_img/smallkoi_white.png" alt="home"></a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="boxA">
+        <div class="boxA_inner">
+            <div class="boxA-1">
+                <h1>
+                    <a href=""><img src="img/logo_white.png" alt="logo"></a>
+                </h1>
+            </div>
+            <div class="boxA-2">
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="">대전 아쿠아리움</a></li>
+                        <li><a href="">이용안내</a></li>
+                        <li><a href="">프로그램</a></li>
+                        <li><a href="">혜택안내</a></li>
+                        <li><a href="">제휴/단체안내</a></li>
+                        <li><a href="">아쿠아톡</a></li>
+                    </ul>
+                </nav>
+                <div class="util"><a href="">한/영</a></div>
+            </div>
+        </div>
     </header>
 
-    <section class="hero" id="home">
-        <!-- <div class="goldfish"></div>
-        <div class="realistic-fish"></div> -->
+    <div class="boxB">
+        <div class="landing">
+            <section class="box1">
+                <span>
+                    공지
+                </span>
+                <div class="notice">
+                    7월12일(금)~13일(토) 해파리존 내부 정기 점검으로 관람이 제한됩니다.
+                </div>
+            </section>
+            <div class="box23">
+                <section class="box2">
+                    <div class="btnL"><img src="img/box2_btnL.png" alt=""></div>
+                    <p><a href=""><img src="img/Watching-the-Underwater-Performance.png" alt=""></a></p>
+                    <div class="btnR"><img src="img/box2_btnR.png" alt=""></div>
+                </section>
+                <section class="box3">
+                    <div class="box3-inner">
+                        <div class="box3-1">
+                            <div class="Time">
+                                <h3 class="time_title">운영시간</h3>
+                                <div class="time_txt">
+                                    <ul class="time_txt1">
+                                        <li>평일</li>
+                                        <li>주말</li>
+                                        <li>입장마감</li>
+                                    </ul>
+                                    <ul class="time_txt2">
+                                        <li>10:00-18:00</li>
+                                        <li>10:00-18:00</li>
+                                        <li>1시간 전</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="Fee">
+                                <h3 class="fee_title">운영요금</h3>
+                                <div class="fee_txt">
+                                    <ul class="fee_txt1">
+                                        <li>성인</li>
+                                        <li>청소년</li>
+                                        <li>어린이/경로</li>
+                                    </ul>
+                                    <ul class="fee_txt2">
+                                        <li>23,000원</li>
+                                        <li>21,000원</li>
+                                        <li>19,000원</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box3-2">
+                            <div class="box3-2-1">
+                                <div id="calendar"></div>
+                            </div>
+                            <form>
+                                <div class="box3-2-2">
+                                    <p>예약을 원하는 날짜를 선택해주세요.</p>
+                                </div>
+                                <div class="box3-2-3">
+                                    <input type="number" placeholder="인원수를 선택하세요.">
+                                </div>
+                                <div class="box3-2-4">
+                                    <input type="submit" class="more" value="티켓구매하기">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
-        <div class="hero-content">
-            <div class="LogoTop"><img src="landing_img/LogoTop.png" alt=""></div>
-
-            <h1>
-                <div class="koi"><img src="landing_img/koi.png" alt=""></div>
-                <div class="logo_big"><img src="landing_img/portfolio_logo.png" alt=""></div>
-            </h1>
-
-            <!-- <p class="description">창의적 디자인과 코드의 완벽한 조화로<br>사용자 경험을 혁신합니다</p> -->
-            <!-- <a href="#projects" class="cta-button">프로젝트 둘러보기</a> -->
+                </section>
+            </div>
+            <section class="box4">
+                <div class="box4-1">
+                    <div>★<b>4.8</b>(1,258)</div>
+                    <div>전체보기></div>
+                </div>
+                <div class="box4-2">
+                    <div class="review">
+                        <div class="review_txt">
+                            <div>★★★★★</div>
+                            <p>남편이 너무 좋아하네요<br>~~~다음에 또 한 번 오고 싶어요~~</p>
+                        </div>
+                        <div class="review_img">
+                            이미지 들어가야함
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review_txt">
+                            <div>★★★</div>
+                            <p>아이들이 너무 좋아했어요ㅎ <br>
+                                하지만 수질 관리를 좀 더 해야할 것 같네용 </p>
+                        </div>
+                        <div class="review_img">
+                            이미지 들어가야함
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review_txt">
+                            <div>★★★★★</div>
+                            <p>아이들이 즐겁게 체험하는 모습을 보고 체험 자체 만으로도
+                                <br> 만족스러웠지만 세자녀 혜택도 해주셔서 더 감사한 마음으로
+                                <br> 다녀온 것 같네요~ 감사합니다~
+                            </p>
+                        </div>
+                        <div class="review_img">
+                            이미지 들어가야함
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review_txt">
+                            <div>★★★★★</div>
+                            <p>아이들이랑 남편이 너무 좋아하네요~~~
+                                <br> 다음에 또 한 번 오고 싶어요~~~
+                            </p>
+                        </div>
+                        <div class="review_img">
+                            이미지 들어가야함
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review_txt">
+                            <div>★★★★★</div>
+                            <p>아이들이랑 남편이 너무 좋아하네요<br>~~~다음에 또 한 번 오고 싶어요~~</p>
+                        </div>
+                        <div class="review_img">
+                            이미지 들어가야함
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <ul class="Scroll">
-            <li class="mouse"><img src="landing_img/mouse.png" alt=""></li>
-            <li class="mouseScroll"><img src="landing_img/MouseScroll02.png" alt=""></li>
-        </ul>
-    </section>
 
-    <main>
-        <section class="section" id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="profile-section">
-                    <div class="profile-image">
-                        <img src="landing_img/LEEJIEUN.png" alt="">
-                    </div>
-                    <div class="profile-tags">
-                        <span class="tag">ENFP</span>
-                        <span class="tag">태권도 3단</span>
-                        <span class="tag">중국어</span>
-                        <!-- <span class="tag">1종 보통 면허</span> -->
-                    </div>
+        <section class="box5">
+            <div class="box5-1">
+                <h2>대전 아쿠아리움 친구들</h2>
+            </div>
+            <div class="box5-2">
+                <ul class="tab">
+                    <li>
+                        바닷 속
+                    </li>
+                    <li>
+                        숲 속
+                    </li>
+                </ul>
+            </div>
+            <div class="box5-3">
+                <ul>
+                    <li><a href="">이미지1</a></li>
+                    <li><a href="">이미지2</a></li>
+                    <li><a href="">이미지3</a></li>
+                    <li><a href="">이미지4</a></li>
+                    <li><a href="">이미지5</a></li>
+                </ul>
+                <div class="box5_button">
+                    <=>
                 </div>
-
-                <div class="about-text">
-
-                    <div class="AboutMe">
-                        <h3>About me</h3>
-                        <ul class="">
-                            <li>이지은</li>
-                            <!-- <li>ENFP</li> -->
-                            <li>dlwldms58@naver.com</li>
-                        </ul>
+            </div>
+            <div class="box5-4">
+                <p>
+                    <a href="">바닷 속 친구들 모두보기</a>
+                </p>
+            </div>
+        </section>
+        <section class="box6">
+            <div class="banner1">
+                <img>배너1</img>
+            </div>
+        </section>
+        <section class="box7">
+            <div class="box7-1">
+                <h2>어떤 프로그램이 있을까?</h2>
+            </div>
+            <div class="box7-2">
+                <div class="program">
+                    <div class="program_img">
+                        <img src="" alt=""><a href="">이미지1</a></img>
                     </div>
-
-                    <div class="License">
-                        <h3>License</h3>
-                        <ul class="">
-                            <li><strong></strong></li>
-                            <!-- <li>HSK5급</li> -->
-                            <!-- <li>태권도 3단</li> -->
-                            <li>1종 보통 면허</li>
-                            <li>TOEIC speaking MI3</li>
-                        </ul>
-                    </div>
-
-                    <div class="Education">
-                        <h3>Education</h3>
-                        <ul class="">
-                            <li>2024 - 대전대학교 중문과 졸업</li>
-                            <li>2025 - NCS UI/UX 반응형 웹디자인 & 웹퍼블리셔 개발자 과정 수료</li>
-                        </ul>
-                    </div>
-
-                    <div class="KeyWords">
-                        <h3>Key words</h3>
+                    <div class="program_time">
+                        <p>icon</p>
                         <ul>
-                            <li>소통능력</li>
-                            <li>끈기</li>
-                            <li>도전 정신</li>
-                            <li>적응력</li>
-                            <li>세심함</li>
-                            <li>목표지향</li>
+                            <li>11:00</li>
+                            <li>14:00</li>
+                            <li>15:00</li>
+                            <li>16:00</li>
                         </ul>
                     </div>
-
-                    <div class="Skills">
-                        <h3>Skills</h3>
+                    <h3>
+                        물고기 터치 체험
+                    </h3>
+                </div>
+                <div class="program">
+                    <div class="program_img">
+                        <img src="" alt=""><a href="">이미지1</a></img>
+                    </div>
+                    <div class="program_time">
+                        <p>icon</p>
                         <ul>
-                            <li><img src="landing_img/html_Icon2 1.png" alt=""></li>
-                            <li><img src="landing_img/css_Icon 2.png" alt=""></li>
-                            <li><img src="landing_img/javascript_icon 2.png" alt=""></li>
-                            <li><img src="landing_img/jQuery_icon 2.png" alt=""></li>
-                            <li><img src="landing_img/photoshopIcon.png" alt=""></li>
-                            <li><img src="landing_img/illustratorIcon.png" alt=""></li>
-                            <li><img src="landing_img/figma_icon2 1.png" alt=""></li>
+                            <li>11:00</li>
+                            <li>14:00</li>
+                            <li>15:00</li>
+                            <li>16:00</li>
                         </ul>
                     </div>
-                    <!-- <p>안녕하세요! 디자인과 코드의 경계를 넘나드는 창작자입니다. 아름다운 시각적 경험과 완벽한 사용자 인터페이스를 만드는 것이 저의 열정입니다.</p>
-
-                    <p>사용자 중심의 디자인 철학을 바탕으로, 단순히 예쁜 것을 넘어서 의미있고 기능적인 디지털 경험을 창조합니다. 새로운 기술과 디자인 트렌드를 끊임없이 탐구하며, 창의적인
-                        솔루션을 통해 복잡한 문제를 해결합니다.</p>
-
-                    <p>디자인과 개발 사이의 완벽한 균형을 추구하며, 아이디어에서 실제 구현까지 전 과정을 아우르는 통합적 접근 방식을 지향합니다.</p> -->
+                    <h3>
+                        펭귄 먹이주기
+                    </h3>
                 </div>
+                <div class="program">
+                    <div class="program_img">
+                        <img src="" alt=""><a href="">이미지1</a></img>
+                    </div>
+                    <div class="program_time">
+                        <p>icon</p>
+                        <ul>
+                            <li>11:00</li>
+                            <li>14:00</li>
+                            <li>15:00</li>
+                            <li>16:00</li>
+                        </ul>
+                    </div>
+                    <h3>
+                        수중 공연 관람
+                    </h3>
+                </div>
+                <div class="program">
+                    <div class="program_img">
+                        <img src="" alt=""><a href="">이미지1</a></img>
+                    </div>
+                    <div class="program_time">
+                        <p>icon</p>
+                        <ul>
+                            <li>11:00</li>
+                            <li>14:00</li>
+                            <li>15:00</li>
+                            <li>16:00</li>
+                        </ul>
+                    </div>
+                    <h3>
+                        생물 해설 프로그램
+                    </h3>
+                </div>
+
+            </div>
+            <div class="box7-3">
+                <p>
+                    <a href="">프로그램 전체보기</a>
+                </p>
             </div>
         </section>
 
-        <!-- <section class="section" id="skills">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="landing_img/html_Icon2 1.png" alt=""></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="landing_img/css_Icon 2.png" alt=""></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="landing_img/javascript_icon 2.png" alt=""></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="landing_img/jQuery_icon 2.png" alt=""></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="landing_img/photoshopIcon.png" alt=""></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="landing_img/illustratorIcon.png" alt=""></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><img src="landing_img/figma_icon2 1.png" alt=""></div>
+        <section class="box8">
+            <div class="box8-1">
+                <div>
+                    <p>세부시설안내</p>
+                    <p>
+                        <a href="">더보기</a>
+                    </p>
                 </div>
             </div>
-        </section> -->
-
-        <section class="section" id="projects">
-            <h2 class="section-title">2025 Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"><img src="landing_img/aquaLandingPage.png" alt="">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">대전 아쿠아리움 웹사이트 리뉴얼</h3>
-                        <p class="project-description">직관적인 정보 탐색과 예매 시스템, 생동감 있는 디자인으로 즐거운 해양 체험을 온라인에서도 느낄 수 있도록 한
-                            프로젝트입니다.</p>
-                        <ul class="project-proficiency">
-                            <li><strong>Type</strong> 개인작업 100%</li>
-                            <li><strong>Tools</strong> Figma, Photoshop, HTML5, CSS3, Javascript</li>
-                        </ul>
-                        <ul class="project-linkBox">
-                            <li><a href="#" class="project-link">Concept View</a></li>
-                            <li><a href="https://dlwldms58.github.io/portfolio2025/project001/" class="project-link">Web
-                                    Site</a></li>
-                        </ul>
-                    </div>
+            <div class="box8-2">
+                <div>
+                    <ul>
+                        <li>1F</li>
+                        <li>2F</li>
+                        <li>3F</li>
+                        <li>4F</li>
+                    </ul>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"><img src="landing_img/BhcLandingPage.png" alt=""></div>
-                    <div class="project-content">
-                        <h3 class="project-title">BHC 웹사이트 리뉴얼</h3>
-                        <p class="project-description">브랜드 아이덴티티 강화와 함께 캐러셀등 다양한 인터랙션을 적용해, 시각적 즐거움과 몰입감 있는 사용자 경험으로
-                            리뉴얼했습니다.</p>
-                        <ul class="project-proficiency">
-                            <li><strong>Type</strong> 개인작업 100%</li>
-                            <li><strong>Tools</strong> Figma, Photoshop, HTML5, CSS3, Javascript</li>
-                        </ul>
-                        <ul class="project-linkBox">
-                            <li><a href="#" class="project-link">Concept View</a></li>
-                            <li><a href="https://dlwldms58.github.io/portfolio2025/project002/" class="project-link">Web
-                                    Site</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"><img src="landing_img/roseLandingPage.png" alt=""></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Blackpink 로제 인물형 웹사이트</h3>
-                        <p class="project-description">파노라마와 별 떨어짐 애니메이션 등 인터랙션 효과를 활용해, 로제의 음악·패션·커리어를 감각적으로 전달하는
-                            웹사이트입니다.</p>
-                        <ul class="project-proficiency">
-                            <li><strong>Type</strong> 개인작업 100%</li>
-                            <li><strong>Tools</strong> Figma, Photoshop, HTML5, CSS3, Javascript</li>
-                        </ul>
-                        <ul class="project-linkBox">
-                            <li><a href="#" class="project-link">Concept View</a></li>
-                            <li><a href="https://dlwldms58.github.io/portfolio2025/project003/" class="project-link">Web
-                                    Site</a></li>
-                        </ul>
-                    </div>
+                <div>
+                    이미지
                 </div>
             </div>
         </section>
-
-        <section class="section" id="contact">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <p>새로운 프로젝트나 창의적인 협업에 대한 이야기를 나누고 싶습니다.<br>언제든지 편하게 연락해 주세요!</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon"><img src="landing_img/MailIcon.png" alt=""></div>
-                        <span>dlwldms58@naver.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><img src="landing_img/kakao-talkIcon.png" alt=""></div>
-                        <span><a href="">카카오톡</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-githubIcon"><img src="landing_img/githubIcon.png" alt=""></div>
-                        <!-- <div>🔗</div> -->
-                        <span><a href="">Github</a></span>
-                    </div>
-                </div>
-            </div>
+        <section class="box9">
+            배너2
         </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <!-- <p>본 페이지는 포트폴리오용으로 제작된 사이트 입니다.
-                해당사이트의 이미지와 동영상 기타 상세내용은 상업용으로 사용하지 않습니다.</p> -->
-            <p>copyright ⓒ 2025.green310. All Rights Reserved.</p>
+        <section class="box10">
+            <div class="box10-1">구글맵</div>
+            <div class="box10-2">찾아오시는 길 안내</div>
+        </section>
+        <section class="box11">
+            <div class="box11-1">자주하시는 질문 이미지</div>
+            <div class="box11-2">자주하시는 질문</div>
+        </section>
+    </div>
+    <footer class="boxC">
+        <div class="boxC-1">
+            <div class="copyright">
+                <p>본 페이지는 포트폴리오용으로 제작된 사이트 입니다. <br>
+                    해당사이트의 이미지와 동영상 기타 상세내용은 상업용으로 사용하지 않습니다.</p>
+                <p>copyright &copy; 2025.green310.All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
-
-
-    <!-- 컨셉뷰 팝업설정 -->
-
-    <div class="Black_Bg on">
-        <span class="close"></span>
-        <!-- 프로젝트001 -->
-        <div class="popUp" style="display: block;">
-            <img src="" alt="">
-        </div>
-
-        <!-- 프로젝트002 -->
-        <div class="popUp">
-            <img src="" alt="">
-        </div>
-
-        <!-- 프로젝트003 -->
-        <div class="popUp">
-            <img src="" alt="">
-        </div>
-    </div>
-
     <script>
-        // 스무스 스크롤
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        $('#calendar').datepicker({
+            onSelect: function (dateText, inst) {
+                let year = inst.selectedYear;
+                let mon = inst.selectedMonth + 1;
+                let day = inst.selectedDay;
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -60px 0px'
-        };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+                $('.date1').text(`${year}년${mon}월${day}일`)
 
-        // 애니메이션 대상 요소들
-        document.querySelectorAll('.skill-card, .project-card, .contact-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(40px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
-        });
 
-        // 부드러운 배경 애니메이션
-        const waterBg = document.querySelector('.water-bg');
-        let scrollY = 0;
+                // $('.date1').text(${})
 
-        window.addEventListener('scroll', () => {
-            scrollY = window.scrollY;
-            waterBg.style.transform = `translateY(${scrollY * 0.5}px)`;
-        });
-
-        // 동적 물결 효과
-        function createRipple(e) {
-            const ripple = document.createElement('div');
-            ripple.style.position = 'absolute';
-            ripple.style.borderRadius = '50%';
-            ripple.style.background = 'rgba(255, 255, 255, 0.1)';
-            ripple.style.transform = 'scale(0)';
-            ripple.style.animation = 'ripple 0.6s linear';
-            ripple.style.left = (e.clientX - 10) + 'px';
-            ripple.style.top = (e.clientY - 10) + 'px';
-            ripple.style.width = '20px';
-            ripple.style.height = '20px';
-            ripple.style.pointerEvents = 'none';
-
-            document.body.appendChild(ripple);
-
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        }
-
-        // 리플 효과 CSS 추가
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
             }
-        `;
-        document.head.appendChil
+        })
+    </script>
+</body>
+
+</html>

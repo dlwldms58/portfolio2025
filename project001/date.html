@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달력만들기</title>
+    <!-- 제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+
+    <style>
+        .ui-state-highlight,
+        .ui-widget-content .ui-state-highlight,
+        .ui-widget-header .ui-state-highlight {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 인풋방식으로 달력출력하기 -->
+    <p>
+        <input type="text" id="date">
+    </p>
+
+
+    <!-- 블럭방식으로 달력 출력하기 -->
+    <div id="datepicker">
+
+    </div>
+
+    <!-- 선택한 날짜 출력하기 -->
+    <div class="date1"></div>
+
+    <script>
+        $('#date').datepicker({
+            dateFormat : "yy년 mm월 dd일"
+        })
+        $('#datepicker').datepicker({
+            onSelect:function(dateText,inst){
+                let year = inst.selectedYear;
+                let mon = inst.selectedMonth+1;
+                let day = inst.selectedDay;
+
+
+                $('.date1').text(`${year}년${mon}월${day}일`)
+
+
+                // $('.date1').text(${})
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>
