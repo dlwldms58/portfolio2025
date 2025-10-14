@@ -1,0 +1,81 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+a {text-decoration: none;
+    color: #000;}
+ul,ol {list-style: none;}
+img {border: 0;
+    vertical-align: bottom;}
+
+/* 헤더가로정렬 */
+.boxA{display: flex;}
+.boxA-1{width: 20%;}
+.boxA-2{width: 80%;}
+
+
+ /* 전체wrap 설정 */
+.boxB {display: flex;
+      flex-wrap: wrap;}
+.box1{width: 100%;}
+.box2{width: 70%;}
+.box3{width: 30%;}
+.box4{width: 100%;}
+.box5{width: 100%;}
+.box6{width: 100%;}
+.box7{width: 100%;}
+.box8{width: 100%;}
+.box9{width: 100%;}
+.box10{width: 100%;}
+.box11{width: 100%;}
+
+
+/* 전체 레이아웃 설정 */
+
+/* 세부시설 가로정렬 */
+.box8 {display: flex;}
+.box8-1 {width:30%;}
+.box8-2 {width:70%;}
+
+/* 찾아오시는 길 가로정렬 */
+.box10 {display: flex;}
+.box10-1 {width: 70%;}
+.box10-2 {width: 30%;}
+
+/* 자주하시는 질문 가로 정렬 */
+.box11 {display: flex;}
+.box11-1 {width: 50%;}
+.box11-2 {width: 50%;}
+
+
+
+
+
+
+
+
+
+
+
+     
+        /* 미디어쿼리구간########################################################################### */
+
+        /* 모바일구간 */
+        @media(max-width:599px){
+
+
+        }/*599px 이하 설정완료 구간*/
+
+        /* 태블릿구간 */
+        @media(min-width:768px){
+
+
+        }/*768px이상 설정완료 구간*/
+
+        /* PC용 구간 */
+        @media(min-width:960px){
+
+            
+        }
