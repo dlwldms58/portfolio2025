@@ -476,6 +476,7 @@ body:has(.landing:not([style*="display: none"])) .gnb {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.7;
 }
 .galleryWrap article img {
   width: 100%;
