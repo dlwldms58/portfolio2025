@@ -1330,6 +1330,7 @@ img {
 /* ---------------------------------------프로그램 소개 및 예약 섹션 설정하기 */
 .box7 {
     width: 100%;
+    height: 740px;
 }
 
 .box7-1 {
@@ -1356,7 +1357,7 @@ img {
 }
 
 .program_img {
-    width: 350px;
+    width: 338.75px;
     height: 400px;
     background-color: #F7F8FB;
     border-radius: 20px;
@@ -1462,7 +1463,7 @@ img {
     justify-content: center;
     align-items: end;
     gap: 20px;
-    margin: 100px 0;
+    margin: 200px 0;
     box-sizing: border-box;
 
 }
@@ -1643,6 +1644,7 @@ img {
     align-items: center;
     gap: 20px;
     box-sizing: border-box;
+    margin-bottom: 100px;
 }
 
 .box10-1 {
@@ -1653,6 +1655,11 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    border: none;
+}
+.box10-1  iframe {
+    width: 900px;
+    display: block;
 }
 
 .box10-2 {
