@@ -16,6 +16,9 @@
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
 
+    <!-- 외부스크립트 연결 -->
+    <script src="javascript/js.js"></script>
+
 
     <style>
         .ui-datepicker {
@@ -28,23 +31,21 @@
 <body>
     <header class="boxA">
         <div class="boxA_inner">
-            <div class="boxA-1">
-                <h1>
-                    <a href=""><img src="img/logo_white.png" alt="logo"></a>
-                </h1>
-            </div>
-            <div class="boxA-2">
-                <nav class="gnb">
-                    <ul>
-                        <li><a href="">대전 아쿠아리움</a></li>
-                        <li><a href="">이용안내</a></li>
-                        <li><a href="">프로그램</a></li>
-                        <li><a href="">혜택안내</a></li>
-                        <li><a href="">제휴/단체안내</a></li>
-                        <li><a href="">아쿠아톡</a></li>
-                    </ul>
-                </nav>
-                <div class="util"><a href="">한/영</a></div>
+            <h1 class="logo">
+                <a href="#"><img src="img/logo_white.png" alt="logo"></a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="">대전 아쿠아리움</a></li>
+                    <li><a href="">이용안내</a></li>
+                    <li><a href="">프로그램</a></li>
+                    <li><a href="">혜택안내</a></li>
+                    <li><a href="">제휴/단체안내</a></li>
+                    <li><a href="">아쿠아톡</a></li>
+                </ul>
+            </nav>
+            <div class="util">
+                <a href="">한/영</a>
             </div>
         </div>
     </header>
@@ -55,20 +56,29 @@
                 <span>
                     공지
                 </span>
-                <div class="notice">
-                    7월12일(금)~13일(토) 해파리존 내부 정기 점검으로 관람이 제한됩니다.
+                <div class="notice-wrap">
+                    <p class="notice on">🐠 오늘도 아쿠아리움에 오신 걸 환영합니다!</p>
+                    <p class="notice">🌊 오후 3시 돌고래 쇼가 시작됩니다.</p>
+                    <p class="notice">🐢 체험존에서는 물고기 먹이주기 체험이 가능합니다.</p>
+                    <p class="notice">🎟️ 예매는 입장 30분 전까지!</p>
                 </div>
             </section>
             <div class="box23">
                 <section class="box2">
                     <div class="btnL"><img src="img/box2_btnL.png" alt=""></div>
-                    <p><a href=""><img src="img/Watching-the-Underwater-Performance.png" alt=""></a></p>
+                    <p><a href=""><img src="img/hero-Img.jpg" alt=""></a></p>
                     <div class="btnR"><img src="img/box2_btnR.png" alt=""></div>
                 </section>
                 <section class="box3">
                     <div class="box3-inner">
                         <div class="box3-1">
                             <div class="Time">
+                                <div class="tack">
+                                    <img src="img/tack.png" alt="tack">
+                                </div>
+                                <div class="plus">
+                                    <img src="img/plus.png" alt="">
+                                </div>
                                 <h3 class="time_title">운영시간</h3>
                                 <div class="time_txt">
                                     <ul class="time_txt1">
@@ -84,6 +94,12 @@
                                 </div>
                             </div>
                             <div class="Fee">
+                                <div class="tack">
+                                    <img src="img/tack.png" alt="tack">
+                                </div>
+                                <div class="plus">
+                                    <img src="img/plus.png" alt="">
+                                </div>
                                 <h3 class="fee_title">운영요금</h3>
                                 <div class="fee_txt">
                                     <ul class="fee_txt1">
@@ -100,17 +116,19 @@
                             </div>
                         </div>
                         <div class="box3-2">
-                            <div class="box3-2-1">
-                                <div id="calendar"></div>
+                            <div class="reservation_calendar">
+                                <!-- <div id="calendar" style=""></div> -->
+                                <img src="img/calendar.png" alt="">
                             </div>
                             <form>
-                                <div class="box3-2-2">
-                                    <p>예약을 원하는 날짜를 선택해주세요.</p>
+                                <div class="reservation_date">
+                                    <p>※예약을 원하는 날짜를 선택해주세요.</p>
                                 </div>
-                                <div class="box3-2-3">
-                                    <input type="number" placeholder="인원수를 선택하세요.">
+                                <div class="reservation_people">
+                                    <span><img src="img/people.png" alt=""></span>
+                                    <input type="number" class="people" placeholder="인원수를 선택하세요.">
                                 </div>
-                                <div class="box3-2-4">
+                                <div class="reservation_tiket">
                                     <input type="submit" class="more" value="티켓구매하기">
                                 </div>
                             </form>
@@ -121,61 +139,144 @@
             </div>
             <section class="box4">
                 <div class="box4-1">
-                    <div>★<b>4.8</b>(1,258)</div>
-                    <div>전체보기></div>
+                    <div class="rank"><img src="img/Star.png" alt=""><b>4.8</b>(1,258)</div>
+                    <div class="click">전체보기 ></div>
                 </div>
                 <div class="box4-2">
-                    <div class="review">
-                        <div class="review_txt">
-                            <div>★★★★★</div>
-                            <p>남편이 너무 좋아하네요<br>~~~다음에 또 한 번 오고 싶어요~~</p>
+
+                        <div class="review">
+                            <ul class="review_tit">
+                                <li class="user"><img src="img/user.png" alt=""></li>
+                                <li class="ID">dlwldms58</li>
+                                <li class="star"><img src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"></li>
+                            </ul>
+                            <div class="review_txt">
+                                <p>아이들과 함께 즐기기 정말 좋은 곳이에요 😊</p>
+                                <div class="review_img">
+                                    <img class="img01" src="img/Touch Tank.jpeg" alt="">
+                                </div>
+                            </div>
+    
                         </div>
-                        <div class="review_img">
-                            이미지 들어가야함
+                        <!-- 추가 리뷰 2 -->
+                        <div class="review">
+                            <ul class="review_tit">
+                                <li class="user"><img src="img/user.png" alt=""></li>
+                                <li class="ID">blue_tang</li>
+                                <li class="star">
+                                    <img src="img/Star.png" alt=""><img src="img/Star.png" alt=""><img src="img/Star.png"
+                                        alt=""><img src="img/Star.png" alt=""><img src="img/Star.png" alt="">
+                                </li>
+                            </ul>
+                            <div class="review_txt">
+                                <p>수중 공연이 하이라이트! 꼭 보세요 👏</p>
+                                <div class="review_img">
+                                    <img class="img01" src="img/Watching-the-Underwater-Performance.png" alt="">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="review">
-                        <div class="review_txt">
-                            <div>★★★</div>
-                            <p>아이들이 너무 좋아했어요ㅎ <br>
-                                하지만 수질 관리를 좀 더 해야할 것 같네용 </p>
+                        <div class="review">
+                            <ul class="review_tit">
+                                <li class="user"><img src="img/user.png" alt=""></li>
+                                <li class="ID">lumina_path</li>
+                                <li class="star"><img src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"></li>
+                            </ul>
+                            <div class="review_txt">
+                                <p>바다 속에 들어온 것처럼 신비롭고 아름다웠어요!</p>
+                                <div class="review_img">
+                                    <img class="img01" src="img/review01.jpeg" alt="">
+                                    <img class="img02" src="img/Blacktip-reef-shark.jpg" alt="">
+                                </div>
+                            </div>
+    
                         </div>
-                        <div class="review_img">
-                            이미지 들어가야함
+                        <div class="review">
+                            <ul class="review_tit">
+                                <li class="user"><img src="img/user.png" alt=""></li>
+                                <li class="ID">hello_june</li>
+                                <li class="star"><img src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"></li>
+                            </ul>
+                            <div class="review_txt">
+                                <p>아이들과 함께 즐기기 정말 좋은 곳이에요 😊</p>
+                                <div class="review_img">
+                                    <img class="img01" src="img/blue-spotted-lagoon-ray-1.jpg" alt="">
+                                    <img class="img02" src="img/Fish-Touch-Experience.jpg" alt="">
+                                </div>
+                            </div>
+    
                         </div>
-                    </div>
-                    <div class="review">
-                        <div class="review_txt">
-                            <div>★★★★★</div>
-                            <p>아이들이 즐겁게 체험하는 모습을 보고 체험 자체 만으로도
-                                <br> 만족스러웠지만 세자녀 혜택도 해주셔서 더 감사한 마음으로
-                                <br> 다녀온 것 같네요~ 감사합니다~
-                            </p>
+                        <div class="review">
+                            <ul class="review_tit">
+                                <li class="user"><img src="img/user.png" alt=""></li>
+                                <li class="ID">midnightwave</li>
+                                <li class="star"><img src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"></li>
+                            </ul>
+                            <div class="review_txt">
+                                <p>수조가 정말 크고 물고기 종류도 다양해서 눈이 즐거웠어요!</p>
+                                <div class="review_img">
+                                    <img class="img01" src="img/Watching-the-Underwater-Performance.png" alt="">
+                                </div>
+                            </div>
+    
                         </div>
-                        <div class="review_img">
-                            이미지 들어가야함
+                        <div class="review">
+                            <ul class="review_tit">
+                                <li class="user"><img src="img/user.png" alt=""></li>
+                                <li class="ID">starleaf_06</li>
+                                <li class="star"><img src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"><img src="img/Star.png" alt="Star"><img
+                                        src="img/Star.png" alt="Star"></li>
+                            </ul>
+                            <div class="review_txt">
+                                <p>사진 스팟이 많아서 인생샷도 잔뜩 건졌어요 📸</p>
+                                <div class="review_img">
+                                    <img class="img01" src="img/BrownBear.jpg" alt="">
+                                    <img class="img02" src="img/Angelfish.jpg" alt="">
+                                </div>
+                            </div>
+    
                         </div>
-                    </div>
-                    <div class="review">
-                        <div class="review_txt">
-                            <div>★★★★★</div>
-                            <p>아이들이랑 남편이 너무 좋아하네요~~~
-                                <br> 다음에 또 한 번 오고 싶어요~~~
-                            </p>
+                        <div class="review">
+                            <ul class="review_tit">
+                                <li class="user"><img src="img/user.png" alt=""></li>
+                                <li class="ID">dive_in</li>
+                                <li class="star">
+                                    <img src="img/Star.png" alt=""><img src="img/Star.png" alt=""><img src="img/Star.png"
+                                        alt=""><img src="img/Star.png" alt=""><img src="img/Star.png" alt="">
+                                </li>
+                            </ul>
+                            <div class="review_txt">
+                                <p>해설 프로그램으로 더 재밌게 관람했습니다!</p>
+                                <div class="review_img">
+                                    <img class="img01" src="img/InterpretationGuide.jpg" alt="">
+                                </div>
+                            </div>
                         </div>
-                        <div class="review_img">
-                            이미지 들어가야함
+                        <div class="review">
+                            <ul class="review_tit">
+                                <li class="user"><img src="img/user.png" alt=""></li>
+                                <li class="ID">kid_mom</li>
+                                <li class="star">
+                                    <img src="img/Star.png" alt=""><img src="img/Star.png" alt=""><img src="img/Star.png"
+                                        alt=""><img src="img/Star.png" alt=""><img src="img/Star.png" alt="">
+                                </li>
+                            </ul>
+                            <div class="review_txt">
+                                <p>유모차로 이동하기 편했어요 👍</p>
+                                <div class="review_img">
+                                    <img class="img01" src="img/review01.jpeg" alt="">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="review">
-                        <div class="review_txt">
-                            <div>★★★★★</div>
-                            <p>아이들이랑 남편이 너무 좋아하네요<br>~~~다음에 또 한 번 오고 싶어요~~</p>
-                        </div>
-                        <div class="review_img">
-                            이미지 들어가야함
-                        </div>
-                    </div>
+
                 </div>
             </section>
         </div>
@@ -186,25 +287,70 @@
             </div>
             <div class="box5-2">
                 <ul class="tab">
-                    <li>
+                    <li class="on ocean">
                         바닷 속
                     </li>
-                    <li>
+                    <li class="shore">
                         숲 속
                     </li>
                 </ul>
             </div>
             <div class="box5-3">
-                <ul>
-                    <li><a href="">이미지1</a></li>
-                    <li><a href="">이미지2</a></li>
-                    <li><a href="">이미지3</a></li>
-                    <li><a href="">이미지4</a></li>
-                    <li><a href="">이미지5</a></li>
+                <ul class="oceanCreature">
+                    <li>
+                        <a href="">
+                            <img src="img/Angelfish.jpg" alt="">
+                            <div class="fish-name">Angelfish</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/Triggerfish.jpg" alt="">
+                            <div class="fish-name">Triggerfish</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/Clownfish.jpg" alt="">
+                            <div class="fish-name">Clownfish</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/Blue-Tang.jpg" alt="Blue-Tang">
+                            <div class="fish-name">BlueTang</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/blue-spotted-lagoon-ray-1.jpg" alt="">
+                            <div class="fish-name">Stingray</div>
+                        </a>
+                    </li>
+
                 </ul>
-                <div class="box5_button">
-                    <=>
-                </div>
+                <ul class="shoreCreature">
+                    <li><a href="">
+                            <img src="img/Lion.jpg" alt="">
+                            <div class="animal-name">Lion</div>
+                        </a></li>
+                    <li><a href="">
+                            <img src="img/Elephant.jpg" alt="">
+                            <div class="animal-name">Elephant</div>
+                        </a></li>
+                    <li><a href="">
+                            <img src="img/Zebra.jpg" alt="">
+                            <div class="animal-name">Zebra</div>
+                        </a></li>
+                    <li><a href="">
+                            <img src="img/Chimpanzee.webp" alt="">
+                            <div class="animal-name">Chimpanzee</div>
+                        </a></li>
+                    <li><a href="">
+                            <img src="img/BrownBear.jpg" alt="">
+                            <div class="animal-name">BrownBear</div>
+                        </a></li>
+                </ul>
             </div>
             <div class="box5-4">
                 <p>
@@ -214,7 +360,13 @@
         </section>
         <section class="box6">
             <div class="banner1">
-                <img>배너1</img>
+                <div class="bannerTxt_Inner">
+                    <h3 class="bannerTxt">첫 방문이니까, 10% + 10% 할인 </h3>
+                    <p class="bannerSmallTxt">첫 발걸음부터 기분좋게!</p>
+                </div>
+                <div class="bannerImg">
+                    <img src="img/card.png" alt="">
+                </div>
             </div>
         </section>
         <section class="box7">
@@ -222,14 +374,14 @@
                 <h2>어떤 프로그램이 있을까?</h2>
             </div>
             <div class="box7-2">
-                <div class="program">
+                <div class="program" class="program1">
                     <div class="program_img">
-                        <img src="" alt=""><a href="">이미지1</a></img>
+                        <a href=""><img src="img/Fish-Touch-Experience.jpg" alt=""></a>
                     </div>
                     <div class="program_time">
-                        <p>icon</p>
+                        <!-- <p>icon</p> -->
                         <ul>
-                            <li>11:00</li>
+                            <li class="on">11:00</li>
                             <li>14:00</li>
                             <li>15:00</li>
                             <li>16:00</li>
@@ -239,14 +391,14 @@
                         물고기 터치 체험
                     </h3>
                 </div>
-                <div class="program">
+                <div class="program" class="program2">
                     <div class="program_img">
-                        <img src="" alt=""><a href="">이미지1</a></img>
+                        <a href=""><img src="img/penguin-feeding(1).webp" alt=""></a>
                     </div>
                     <div class="program_time">
-                        <p>icon</p>
+                        <!-- <p>icon</p> -->
                         <ul>
-                            <li>11:00</li>
+                            <li class="on">11:00</li>
                             <li>14:00</li>
                             <li>15:00</li>
                             <li>16:00</li>
@@ -256,14 +408,14 @@
                         펭귄 먹이주기
                     </h3>
                 </div>
-                <div class="program">
+                <div class="program" class="program3">
                     <div class="program_img">
-                        <img src="" alt=""><a href="">이미지1</a></img>
+                        <a href=""><img src="img/Watching-the-Underwater-Performance.png" alt=""></a>
                     </div>
                     <div class="program_time">
-                        <p>icon</p>
+                        <!-- <p>icon</p> -->
                         <ul>
-                            <li>11:00</li>
+                            <li class=" on">11:00</li>
                             <li>14:00</li>
                             <li>15:00</li>
                             <li>16:00</li>
@@ -273,14 +425,14 @@
                         수중 공연 관람
                     </h3>
                 </div>
-                <div class="program">
+                <div class="program" class="program4">
                     <div class="program_img">
-                        <img src="" alt=""><a href="">이미지1</a></img>
+                        <a href=""><img src="img/InterpretationGuide.jpg" alt=""></a>
                     </div>
                     <div class="program_time">
-                        <p>icon</p>
+                        <!-- <p>icon</p> -->
                         <ul>
-                            <li>11:00</li>
+                            <li class="">11:00</li>
                             <li>14:00</li>
                             <li>15:00</li>
                             <li>16:00</li>
@@ -290,7 +442,6 @@
                         생물 해설 프로그램
                     </h3>
                 </div>
-
             </div>
             <div class="box7-3">
                 <p>
@@ -302,36 +453,126 @@
         <section class="box8">
             <div class="box8-1">
                 <div>
-                    <p>세부시설안내</p>
+                    <h3>세부시설 안내</h3>
                     <p>
                         <a href="">더보기</a>
                     </p>
                 </div>
+                <div class="facilities_tack">
+                    <img src="img/tack.png" alt="">
+                </div>
             </div>
             <div class="box8-2">
-                <div>
+                <div class="facilitiesFloors">
                     <ul>
-                        <li>1F</li>
+                        <li class="on">1F</li>
                         <li>2F</li>
                         <li>3F</li>
                         <li>4F</li>
                     </ul>
                 </div>
-                <div>
-                    이미지
+                <div class="facilitiesImg">
+                    <img src="img/DetailedFacilityInformation.png" alt="">
                 </div>
             </div>
         </section>
         <section class="box9">
-            배너2
+            <div class="banner2">
+                <div class="bannerTxt_Inner">
+                    <h3 class="bannerTxt">첫 방문이니까, 10% + 10% 할인 </h3>
+                    <p class="bannerSmallTxt">첫 발걸음부터 기분좋게!</p>
+                </div>
+                <div class="bannerImg">
+                    <img src="img/card.png" alt="">
+                </div>
+            </div>
         </section>
         <section class="box10">
-            <div class="box10-1">구글맵</div>
-            <div class="box10-2">찾아오시는 길 안내</div>
+            <div class="box10-1">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.0966553007534!2d127.41849307561901!3d36.309962895181094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654ed7244b3f81%3A0x96beb8f73ba98323!2z64yA7KCE7JWE7L-g7JWE66as7JuA!5e0!3m2!1sko!2skr!4v1760502860935!5m2!1sko!2skr"
+                    width="900" height="600" style="border-radius:20px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="box10-2">
+                <div>
+                    <h3>찾아오시는 길 안내</h3>
+                    <address>
+                        <p>주소: 대전광역시 중구 ○○○길 123</p>
+                        <p>전화: 042-123-4567</p>
+                    </address>
+                    <p>
+                        <a href="">더보기</a>
+                    </p>
+                </div>
+                <div class="Navigation_tack">
+                    <img src="img/tack.png" alt="">
+                </div>
+            </div>
         </section>
         <section class="box11">
-            <div class="box11-1">자주하시는 질문 이미지</div>
-            <div class="box11-2">자주하시는 질문</div>
+            <div class="box11-1">
+                <img src="img/Watching-the-Underwater-Performance.png" alt="">
+                <h3>자주하시는 질문</h3>
+                <p>
+                    <a href="">더보기</a>
+                </p>
+            </div>
+            <div class="box11-2">
+                <ul class="qna">
+                    <li class="qnaBox1" id="Q&A">
+                        <h4>Top1</h4>
+                        <ul class="">
+                            <li>Q 입장권은 어디서 구매할 수 있나요?</li>
+                            <li>A 1층 로비에서 구매 가능합니다😊</li>
+                        </ul>
+                        <div class="arrow">
+                            <img src="img/arrow(1).png" alt="">
+                        </div>
+                    </li>
+                    <li class="qnaBox2" id="Q&A">
+                        <h4>Top2</h4>
+                        <ul class="">
+                            <li>Q 운영 시간과 휴무일은 어떻게 되나요?</li>
+                            <li>A 홈페이지 가장 상단에 공지되어 있습니다😊</li>
+                        </ul>
+                        <div class="arrow">
+                            <img src="img/arrow(1).png" alt="">
+                        </div>
+                    </li>
+                    <li class="qnaBox3" id="Q&A">
+                        <h4>Top3</h4>
+                        <ul class="">
+                            <li>Q 음식물 반입이 가능한가요?</li>
+                            <li>A 네 가능합니다😊</li>
+                        </ul>
+                        <div class="arrow">
+                            <img src="img/arrow(1).png" alt="">
+                        </div>
+                    </li>
+                    <li class="qnaBox4" id="Q&A">
+                        <h4>Top4</h4>
+                        <ul class="">
+                            <li>Q 주차장은 있나요? 요금은 얼마인가요?</li>
+                            <li>A 주차요금 무료입니다😊</li>
+                        </ul>
+                        <div class="arrow">
+                            <img src="img/arrow(1).png" alt="">
+                        </div>
+                    </li>
+                    <li class="qnaBox5" id="Q&A">
+                        <h4>Top5</h4>
+                        <ul class="">
+                            <li>Q 유아/아동/노인 할인이 있나요?</li>
+                            <li>A 네 있습니다😊</li>
+                        </ul>
+                        <div class="arrow">
+                            <img src="img/arrow(1).png" alt="">
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
         </section>
     </div>
     <footer class="boxC">
