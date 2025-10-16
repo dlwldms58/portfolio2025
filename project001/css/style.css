@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -148,22 +149,44 @@ img {
 }
 
 .box4 {
-    width: 100vw;
-    /* 전체 화면 너비 */
-    max-width: none;
-    /* 기존 max-width 해제 */
+    /* width: 100vw; */
+    width: 1400px;
+    /* max-width: none; */
     margin-left: 50%;
     transform: translateX(-50%);
-    /* 가운데 정렬 */
 }
 
 .box4-2 {
-    width: 100vw;
-    /* 뷰포트 전체 너비 */
-    max-width: none;
+    /* width: 100vw; */
+    width: 1400px;
+    /* max-width: none; */
     overflow: visible;
-    /* 카드 밖으로 보여지게 */
 }
+
+.box4-2 {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* 표준 마스크 */
+    mask-image: linear-gradient(to right,
+            transparent 0,
+            /* 왼쪽 완전 투명 시작 */
+            black 80px,
+            /* 80px 지나며 완전 보임 */
+            black calc(100% - 80px),
+            /* 오른쪽 80px 전까지 보임 */
+            transparent 100%);
+    /* 오른쪽 완전 투명 끝 */
+    /* WebKit 계열 접두사 (사파리/구 iOS) */
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0,
+            black 20px,
+            black calc(100% - 20px),
+            transparent 100%);
+}
+
+
 
 /* 실제로 움직일 트랙 */
 .box4-2 .review-track {
@@ -366,8 +389,8 @@ img {
     position: fixed;
     top: 10px;
     right: 30px;
-    width: 35px;
-    height: 15px;
+    width: 60px;
+    height: 30px;
     border: 2px solid #fff;
     border-radius: 30px;
     padding: 5px 10px;
@@ -455,7 +478,8 @@ img {
 .notice-wrap .notice {
     position: absolute;
     left: 0;
-    top: 100%;/* 아래쪽에서 대기 */
+    top: 100%;
+    /* 아래쪽에서 대기 */
     width: 100%;
     line-height: 24px;
     margin: 0;
@@ -464,20 +488,22 @@ img {
 }
 
 /* 화면에 올라온 상태 */
-.notice-wrap .notice.on{
-  top: 0;
-  opacity: 1;
+.notice-wrap .notice.on {
+    top: 0;
+    opacity: 1;
 }
 
 /* 위로 사라지는 상태 */
-.notice-wrap .notice.out{
-  top: -100%;
-  opacity: 0;
+.notice-wrap .notice.out {
+    top: -100%;
+    opacity: 0;
 }
 
 /* 모션 민감 사용자(선택) */
-@media (prefers-reduced-motion: reduce){
-  .notice-wrap .notice{ transition: none; }
+@media (prefers-reduced-motion: reduce) {
+    .notice-wrap .notice {
+        transition: none;
+    }
 }
 
 
@@ -820,15 +846,17 @@ img {
 /* 리뷰설정하기 */
 .box4 {
     /* margin: 10px 0; */
-    width: 100%;
+    /* width: 100%; */
+    /* width: none; */
 }
 
 .box4-1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0;
     margin-left: 40px;
+    max-width: 1400px;
+    margin: 10px auto;
 }
 
 .box4-1 .rank {
@@ -846,7 +874,6 @@ img {
 }
 
 .box4-2 {
-    max-width: 1400px;
     height: 200px;
     gap: 10px;
     display: flex;
@@ -987,22 +1014,23 @@ img {
 }
 
 .box5-2 .tab li {
-    width: 50px;
+    width: 100px;
     background-color: #F7F8FB;
-    border-radius: 20px;
+    border-radius: 60px;
     color: #8A8B8F;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-size: 20px;
 }
 
 
 
 .box5-2 .tab .on {
     background-color: #FE9D06;
-    border-radius: 20px;
+    border-radius: 60px;
     color: #eee;
     padding: 10px 20px;
 }
