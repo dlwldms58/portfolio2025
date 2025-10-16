@@ -34,7 +34,7 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
 }
 
 
@@ -268,6 +268,7 @@ img {
     width: 100%;
     width: 1400px;
     height: 100%;
+    position: relative;
 
 }
 
@@ -322,24 +323,55 @@ img {
     padding: 10px;
 }
 
-.util {
+.myReservation {
     position: absolute;
-    top: 30%;
-    right: 10px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    /* background-color: #6099F8; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+.myReservation p {}
+.myReservation p a {
+    font-size: 15px;
+     color: #fff;
+}
+
+.myReservationIcon {
+    width: 50px;
+}
+.myReservationIcon img {
+    width: 100%;
+}
+
+.util {
+    position: fixed;
+    top: 10px;
+    right: 30px;
     width: 35px;
     height: 15px;
-    margin-top: -15px;
     border: 2px solid #fff;
     border-radius: 30px;
     padding: 5px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1001;
 }
 
 .util a {
     color: #fff;
     font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    
 }
 
 
@@ -374,7 +406,7 @@ img {
 
 .landing .box1>span {
     background-color: #6099F8;
-    font-size: 20px;
+    font-size: 15px;
     color: #fff;
     padding: 5px 10px;
     border-radius: 15px;
