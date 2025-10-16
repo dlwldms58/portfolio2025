@@ -604,7 +604,6 @@ img {
 .time_title {
     width: 80%;
     margin: 10px 10px 5px 10px;
-    margin-top: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -652,7 +651,6 @@ img {
 .fee_title {
     width: 80%;
     margin: 10px 10px 5px 10px;
-    margin-top: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
