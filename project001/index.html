@@ -39,20 +39,64 @@
             </h1>
             <nav class="gnb">
                 <ul>
-                    <li><a href="">대전 아쿠아리움</a></li>
-                    <li><a href="">이용안내</a></li>
-                    <li><a href="">프로그램</a></li>
-                    <li><a href="">혜택안내</a></li>
-                    <li><a href="">제휴/단체안내</a></li>
-                    <li><a href="">아쿠아톡</a></li>
+                    <li class="Unb">
+                        <a href="#">대전 아쿠아리움</a>
+                        <ul class="submenu" style="display: block;">
+                            <li><a href="#">관람코스</a></li>
+                            <li><a href="#">숲 속 친구들</a></li>
+                            <li><a href="#">바다 속 친구들</a></li>
+                        </ul>
+                    </li>
+                    <li class="Unb">
+                        <a href="#">이용안내</a>
+                        <ul class="submenu" style="display: block;">
+                            <li><a href="#">시간 및 요금</a></li>
+                            <li><a href="#">예매하기</a></li>
+                            <li><a href="#">편의시설</a></li>
+                        </ul>
+                    </li>
+                    <li class="Unb">
+                        <a href="#">프로그램</a>
+                        <ul class="submenu" style="display: block;">
+                            <li><a href="#">체험안내</a></li>
+                            <li><a href="#">프로그램안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="Unb">
+                        <a href="#">혜택안내</a>
+                        <ul class="submenu" style="display: block;">
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">제휴할인</a></li>
+                        </ul>
+                    </li>
+                    <li class="Unb">
+                        <a href="#">제휴/단체안내</a>
+                        <ul class="submenu" style="display: block;">
+                            <li><a href="#">단체관람</a></li>
+                            <li><a href="#">대관문의</a></li>
+                            <li><a href="#">예약신청</a></li>
+                        </ul>
+                    </li>
+                    <li class="Unb">
+                        <a href="#">아쿠아톡</a>
+                        <ul class="submenu" style="display: block;">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                            <li><a href="#">방문 일기</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
+
             <div class="myReservation">
                 <a href="" class="myReservationIcon">
                     <img src="img/Ticket(white).png" alt="">
+                    <p>내 예약</p>
                 </a>
-                <p><a href="">내 예약</a></p>
             </div>
+
             <div class="util">
                 <a href="">한/영</a>
             </div>
@@ -90,9 +134,19 @@
                                 <div class="tack">
                                     <img src="img/tack.png" alt="tack">
                                 </div>
-                                <div class="plus">
+                                <!-- 버튼 -->
+                                <div id="openModal1">
                                     <img src="img/plus.png" alt="">
                                 </div>
+                                <!-- 팝업(모달) -->
+                                <div class="modal" id="modal1">
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <h2>팝업 1</h2>
+                                        <p>첫 번째 팝업 내용입니다.</p>
+                                    </div>
+                                </div>
+
                                 <h3 class="time_title">운영시간</h3>
                                 <div class="time_txt">
                                     <ul class="time_txt1">
@@ -111,8 +165,17 @@
                                 <div class="tack">
                                     <img src="img/tack.png" alt="tack">
                                 </div>
-                                <div class="plus">
+                                <!-- 버튼 -->
+                                <div id="openModal2">
                                     <img src="img/plus.png" alt="">
+                                </div>
+                                <!-- 팝업(모달) -->
+                                <div class="modal" id="modal2">
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <h2>팝업 2</h2>
+                                        <p>두 번째 팝업 내용입니다.</p>
+                                    </div>
                                 </div>
                                 <h3 class="fee_title">운영요금</h3>
                                 <div class="fee_txt">

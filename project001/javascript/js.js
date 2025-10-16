@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  //-----------------------------------------------------------공지사항 설정하기
+  //--------------------------------------------------------------공지사항 설정하기
   const $wrap = $('.notice-wrap');
   let $items = $wrap.find('.notice');
   const DURATION = 2600;     // 공지 노출 시간(다음으로 넘어가기 전 대기)
@@ -34,10 +34,61 @@ $(document).ready(function () {
       $items = $wrap.find('.notice');
     }, SLIDE_MS);
   }
+
+// ---------------------------------------------------------- 요금 및 시간 팝업창 띄우기
+// const modal = document.querySelector('.modal');
+// const openBtn = document.getElementById('plus01');
+// const closeBtn = document.querySelector('.close');
+
+// openBtn.addEventListener('click', () => {
+//   modal.style.display = 'flex';
+// });
+
+// closeBtn.addEventListener('click', () => {
+//   modal.style.display = 'none';
+// });
+
+// modal.addEventListener('click', (e) => {
+//   if(e.target === modal) modal.style.display = 'none';
+// });
+
+// ---------------------------------------------------------
+// 팝업 요소
+const modal1 = document.getElementById('modal1');
+const modal2 = document.getElementById('modal2');
+
+// 버튼 요소
+const open1 = document.getElementById('openModal1');
+const open2 = document.getElementById('openModal2');
+
+// 닫기 버튼 (공통 클래스)
+const closeBtns = document.querySelectorAll('.close');
+
+// 열기
+open1.addEventListener('click', () => modal1.style.display = 'flex');
+open2.addEventListener('click', () => modal2.style.display = 'flex');
+
+// 닫기 (X 버튼)
+closeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.modal').style.display = 'none';
+  });
+});
+
+// 팝업 바깥 클릭 시 닫기
+window.addEventListener('click', (e) => {
+  if (e.target === modal1) modal1.style.display = 'none';
+  if (e.target === modal2) modal2.style.display = 'none';
+});
+
+
+
+
+
   //-------------------------------------------------------------히어로 사진 설정하기
   let current = 0;
-  let img = $('.imgWrap img');
-  let total = img.length;
+  const img = $('.imgWrap img');
+  const total = img.length;
 
   img.eq(current).addClass('active'); // 첫 번째 이미지 보여주기
 
@@ -161,4 +212,4 @@ $(document).ready(function () {
     }
   });
 
-}); // ← 여기서 끝! 밑에 여분의 "})" 넣지 말기
+});

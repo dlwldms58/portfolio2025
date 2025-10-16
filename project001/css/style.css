@@ -325,10 +325,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .logo a:hover {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .logo a img {}
@@ -345,17 +346,71 @@ img {
 .gnb ul {
     display: flex;
     gap: 50px;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
 
 }
 
-.gnb ul li {}
+.gnb ul li {
+    position: relative;
+}
 
-.gnb ul li a {
+.gnb>ul>li>a {
     display: block;
     font-size: 18px;
     color: #fff;
     padding: 10px;
+    transition: padding 0.3s ease;
+    /* transition: transform 0.3s ease-in-out;  */
+
+    padding: 10px 15px;
+    display: block;
+    /* background: #0873FE; */
+    color: #fff;
 }
+
+.gnb ul li a:hover {
+    /* color: #FE9D06; */
+    /* transform: scale(1.1);  */
+opacity: 0.8;
+}
+
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    /* 상위 메뉴 바로 아래 */
+    left: 0;
+    background: #fff;
+    /* display: none; */
+    /* 기본은 숨김 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+    max-height: 0;
+    /* 처음엔 접혀 있음 */
+    transition: max-height 0.4s ease;
+}
+
+.gnb li:hover .submenu {
+  max-height: 600px;             /* 서브메뉴 높이만큼 늘림 */
+}
+
+.submenu li a {
+    width: 150px;
+    padding: 10px 15px;
+    display: block;
+    color: #333;
+}
+
+.gnb li:hover .submenu {
+    /* display: block; */
+}
+
+
+
+
 
 .myReservation {
     position: absolute;
@@ -366,23 +421,54 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+
 
 }
 
-.myReservation p {}
+.myReservation {
+    /* width: 150px; */
+    display: flex;
+    /* background-color: #007BFF; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
 
-.myReservation p a {
+.myReservationIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* transition: transform 0.3s ease, color 0.3s ease; */
+    transition: all 0.3s ease;
+}
+
+.myReservationIcon img {
+    width: 40px;
+}
+
+.myReservationIcon p {
     font-size: 15px;
     color: #fff;
 }
 
-.myReservationIcon {
-    width: 50px;
+.myReservationIcon:hover {
+    transform: scale(1.1);
 }
 
-.myReservationIcon img {
-    width: 100%;
+.myReservationIcon:hover p {
+
+    /* color: #FE9D06; */
+    /* 글자색도 바뀌게 */
+}
+
+
+
+
+.myReservationIcon:hover img {
+    /* filter: brightness(0) invert(1); */
+
 }
 
 .util {
@@ -391,23 +477,37 @@ img {
     right: 30px;
     width: 60px;
     height: 30px;
-    border: 2px solid #fff;
-    border-radius: 30px;
-    padding: 5px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1001;
+    /* background-color: #333; */
 }
 
 .util a {
+    width: 100%;
     color: #fff;
     font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     display: block;
+    transition: all 0.3s ease;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 5px 10px;
 
+}
+
+.util a:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    color: #fff;
+    border: 2px solid #FE9D06;
+    background-color: #FE9D06;
+    border-radius: 30px;
 }
 
 
@@ -449,6 +549,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 /* 부모가 가로 공간을 먹도록 */
@@ -471,6 +572,7 @@ img {
     height: 24px;
     overflow: hidden;
     margin: 0 20px;
+    cursor: pointer;
 }
 
 
@@ -661,16 +763,80 @@ img {
     width: 100%;
 }
 
-.plus {
+
+/* 시간 및 요금 안내 팝업창 열기 */
+#openModal1 {
     position: absolute;
     top: 10px;
     right: 20px;
     width: 15px;
+    border: none;
+    cursor: pointer;
 }
 
-.plus img {
+#openModal1 img {
     width: 100%;
+    transition: transform 0.6s ease;
+    /* ✨ 여기로 옮김 */
 }
+
+#openModal1:hover img {
+    transform: rotate(360deg);
+}
+
+#openModal2 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#openModal2 img {
+    width: 100%;
+    transition: transform 0.6s ease;
+}
+
+#openModal2:hover img {
+    transform: rotate(360deg);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* 반투명 배경 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1004;
+    /* 팝업이 위에 오도록 */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+
 
 .time_title {
     width: 80%;
@@ -1014,7 +1180,7 @@ img {
 }
 
 .box5-2 .tab li {
-    width: 100px;
+    width: 110px;
     background-color: #F7F8FB;
     border-radius: 60px;
     color: #8A8B8F;
@@ -1248,7 +1414,7 @@ img {
 
 .box5-4 {
     width: 100%;
-    /* background-color: #03E3FF;    */
+    /* background-color: #03E3FF;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1256,20 +1422,29 @@ img {
 }
 
 .box5-4 p {
-    background: linear-gradient(70deg, #0873FE, #03E3FF);
-    width: 700px;
-    height: 70px;
-    border-radius: 50px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .box5-4 p a {
+    background: linear-gradient(70deg, #0873FE, #03E3FF);
+    width: 500px;
+    height: 70px;
+    border-radius: 50px;
     display: block;
     font-size: 25px;
     padding: 10px 20px;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.box5-4 p a:hover {
+    opacity: 0.8;
 }
 
 /* ------------------------ 배너01 설정하기 ------------------------------ */
@@ -1439,10 +1614,6 @@ img {
 }
 
 .box7-3 p {
-    background: linear-gradient(70deg, #0873FE, #03E3FF);
-    width: 300px;
-    height: 60px;
-    border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1453,6 +1624,18 @@ img {
     font-size: 25px;
     padding: 10px 20px;
     color: #fff;
+    transition: all 0.3s ease;
+    background: linear-gradient(70deg, #0873FE, #03E3FF);
+    width: 500px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box7-3 p a:hover {
+    opacity: 0.8;
 }
 
 
@@ -1657,7 +1840,8 @@ img {
     border-radius: 20px;
     border: none;
 }
-.box10-1  iframe {
+
+.box10-1 iframe {
     width: 900px;
     display: block;
 }
