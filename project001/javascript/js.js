@@ -1,83 +1,104 @@
 $(document).ready(function () {
+  //-----------------------------------------------------------공지사항 설정하기
+  const $wrap = $('.notice-wrap');
+  let $items = $wrap.find('.notice');
+  const DURATION = 2600;     // 공지 노출 시간(다음으로 넘어가기 전 대기)
+  const SLIDE_MS = 650;      // CSS transition과 동일/약간 크게
 
-  const $notices = $('.notice-wrap .notice');
-  const count = $notices.length;
-  let index = 0;
+  // 공지가 1개 이하면 동작 필요 없음
+  if ($items.length <= 1) return;
 
-  // 초기 상태 정리: 첫 번째만 on, 나머지는 아래(translateY(100%))
-  $notices.removeClass('on out')
-          .css({ transform: 'translateY(100%)', opacity: 0 });
-  $notices.eq(0).addClass('on')
-          .css({ transform: 'translateY(0)', opacity: 1 });
+  // 초기 상태 보정: 첫 번째만 .on, 나머지는 클래스 제거
+  $items.removeClass('on out').eq(0).addClass('on');
 
-  // 자동 전환 (주기 조절 가능)
-  const INTERVAL = 2000; // 2초마다 전환
-  let timer = setInterval(nextNotice, INTERVAL);
+  let timer = setInterval(nextNotice, DURATION);
+
+  // 호버 시 일시정지 / 해제
+  $wrap
+    .on('mouseenter', function () { clearInterval(timer); })
+    .on('mouseleave', function () { timer = setInterval(nextNotice, DURATION); });
 
   function nextNotice() {
-    const $current = $notices.eq(index);
-    const nextIdx = (index + 1) % count;
-    const $next = $notices.eq(nextIdx);
+    // 현재 보이는 것(.on)과 다음 것
+    const $current = $wrap.find('.notice.on').first();
+    const $next = $current.next('.notice').length ? $current.next('.notice') : $wrap.find('.notice').first();
 
-    // 현재 것은 위로(out), 다음 것은 아래에서(on)
+    // 현재 것은 위로 사라지고(out), 다음 것은 올라오게(on)
     $current.removeClass('on').addClass('out');
-    $next.removeClass('out').addClass('on');
+    $next.addClass('on');
 
-    index = nextIdx;
+    // 애니메이션 끝난 뒤 현재 것을 맨 아래로 보내고 상태 초기화
+    setTimeout(function () {
+      $current.removeClass('out').appendTo($wrap);
+      // DOM 순서가 바뀌었으니 캐시 갱신
+      $items = $wrap.find('.notice');
+    }, SLIDE_MS);
   }
+  //-------------------------------------------------------------히어로 사진 설정하기
+  let current = 0;
+  let img = $('.imgWrap img');
+  let total = img.length;
 
-  // (선택) 호버 시 일시정지/재개
-  $('.notice-wrap').on('mouseenter', function () {
-    clearInterval(timer);
-  }).on('mouseleave', function () {
-    timer = setInterval(nextNotice, INTERVAL);
+  img.eq(current).addClass('active'); // 첫 번째 이미지 보여주기
+
+  $('.btnR').click(function () {
+    img.eq(current).removeClass('active');
+    current++;
+    if (current >= total) current = 0;
+    img.eq(current).addClass('active');
   });
 
+  $('.btnL').click(function () {
+    img.eq(current).removeClass('active');
+    current--;
+    if (current < 0) current = total - 1;
+    img.eq(current).addClass('active');
+  });
 
-  //-------------------리뷰트랙 만들기
+  //-------------------------------------------------------------리뷰트랙 만들기
   // 리뷰 무한 롤링
-(function setupReviewMarquee(){
-  const $viewport = $('.box4-2');
-  if (!$viewport.length) return;
-  const hasReviews = $viewport.children('.review').length > 0;
-  if (!hasReviews) return;
+  (function setupReviewMarquee() {
+    const $viewport = $('.box4-2');
+    if (!$viewport.length) return;
+    const hasReviews = $viewport.children('.review').length > 0;
+    if (!hasReviews) return;
 
-  // 1) 현재 리뷰들을 트랙으로 감싸기
-  if (!$viewport.children('.review-track').length){
-    $viewport.wrapInner('<div class="review-track"></div>');
-  }
-  const $track = $viewport.children('.review-track');
+    // 1) 현재 리뷰들을 트랙으로 감싸기
+    if (!$viewport.children('.review-track').length) {
+      $viewport.wrapInner('<div class="review-track"></div>');
+    }
+    const $track = $viewport.children('.review-track');
 
-  // 2) 원본 세트를 복제해서 뒤에 붙여 끊김 없게
-  //    (이미 복제해놨으면 중복 복제를 막기 위해 한 번만)
-  if ($track.children('.review').length <= 8) {
-    $track.append($track.children().clone(true));
-  }
+    // 2) 원본 세트를 복제해서 뒤에 붙여 끊김 없게
+    //    (이미 복제해놨으면 중복 복제를 막기 위해 한 번만)
+    if ($track.children('.review').length <= 8) {
+      $track.append($track.children().clone(true));
+    }
 
-  // 3) 컨텐츠 폭에 따라 속도(지속시간) 자동 계산
-  function applyDuration(){
-    // 원본 1세트의 총 너비(복제 전 폭) = 현재의 절반
-    const totalWidth = $track[0].scrollWidth / 2; // px
-    const speed = 60; // px/s : 숫자 키우면 더 빠르게
-    const duration = totalWidth / speed; // s
-    $track.css('animation-duration', duration + 's');
-  }
+    // 3) 컨텐츠 폭에 따라 속도(지속시간) 자동 계산
+    function applyDuration() {
+      // 원본 1세트의 총 너비(복제 전 폭) = 현재의 절반
+      const totalWidth = $track[0].scrollWidth / 2; // px
+      const speed = 60; // px/s : 숫자 키우면 더 빠르게
+      const duration = totalWidth / speed; // s
+      $track.css('animation-duration', duration + 's');
+    }
 
-  applyDuration();
-  // 반응형 대응: 리사이즈 시 지속시간 재계산(디바운스)
-  let resizeTimer = null;
-  $(window).on('resize', function(){
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(applyDuration, 150);
-  });
-})();
-
-
+    applyDuration();
+    // 반응형 대응: 리사이즈 시 지속시간 재계산(디바운스)
+    let resizeTimer = null;
+    $(window).on('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(applyDuration, 150);
+    });
+  })();
 
 
 
-//----------------------생물 백과사전 탭바 설정하기
-  const $tabs  = $('.box5-2 .tab li');
+
+
+  //----------------------생물 백과사전 탭바 설정하기
+  const $tabs = $('.box5-2 .tab li');
   const $lists = $('.box5-3 > ul'); // .oceanCreature, .shoreCreature
 
   // 접근성
@@ -93,7 +114,7 @@ $(document).ready(function () {
     const $target = $('.' + kind + 'Creature');
     $lists.hide();                          // 둘 다 감추고
     $target.css('display', 'flex')          // 👉 flex로 보여야 하므로 미리 지정
-           .hide().fadeIn(180);             // 페이드 인
+      .hide().fadeIn(180);             // 페이드 인
     // 하단 버튼 문구
     const txt = (kind === 'ocean') ? '바닷 속 친구들 모두보기' : '숲 속 친구들 모두보기';
     $('.box5-4 a').text(txt);

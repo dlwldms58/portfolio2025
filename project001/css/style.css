@@ -141,33 +141,39 @@ img {
 .box4-1 {}
 
 .box4-2 {
-  /* overflow: hidden; */
-  /* padding-left: 40px;   */
-  /* position: relative; */
-  /* z-index: 5; */
+    /* overflow: hidden; */
+    /* padding-left: 40px;   */
+    /* position: relative; */
+    /* z-index: 5; */
 }
 
 .box4 {
-  width: 100vw;          /* 전체 화면 너비 */
-  max-width: none;       /* 기존 max-width 해제 */
-  margin-left: 50%;
-  transform: translateX(-50%);  /* 가운데 정렬 */
+    width: 100vw;
+    /* 전체 화면 너비 */
+    max-width: none;
+    /* 기존 max-width 해제 */
+    margin-left: 50%;
+    transform: translateX(-50%);
+    /* 가운데 정렬 */
 }
 
 .box4-2 {
-  width: 100vw;          /* 뷰포트 전체 너비 */
-  max-width: none;
-  overflow: visible;     /* 카드 밖으로 보여지게 */
+    width: 100vw;
+    /* 뷰포트 전체 너비 */
+    max-width: none;
+    overflow: visible;
+    /* 카드 밖으로 보여지게 */
 }
 
 /* 실제로 움직일 트랙 */
-.box4-2 .review-track{
-  display: flex;
-  gap: 10px;
-  width: max-content;
-  will-change: transform;
-  animation: marquee-right linear infinite; /* duration은 JS에서 계산해 넣음 */
-  animation-play-state: running;
+.box4-2 .review-track {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    will-change: transform;
+    animation: marquee-right linear infinite;
+    /* duration은 JS에서 계산해 넣음 */
+    animation-play-state: running;
 }
 
 .review {
@@ -177,13 +183,18 @@ img {
 
 /* 오른쪽으로 흘러가는 키프레임(좌측 -50% → 0) */
 @keyframes marquee-right {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 /* 호버 시 일시정지(선택) */
-.box4-2:hover .review-track{
-  animation-play-state: paused;
+.box4-2:hover .review-track {
+    animation-play-state: paused;
 }
 
 
@@ -252,7 +263,7 @@ img {
 
 
 
-/* 상세설정!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* ----------------------------- 상세설정!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* 헤더고정시키기 */
 .boxA {
     z-index: 1000;
@@ -333,18 +344,20 @@ img {
     justify-content: center;
     align-items: center;
     gap: 10px;
-   
+
 }
 
 .myReservation p {}
+
 .myReservation p a {
     font-size: 15px;
-     color: #fff;
+    color: #fff;
 }
 
 .myReservationIcon {
     width: 50px;
 }
+
 .myReservationIcon img {
     width: 100%;
 }
@@ -371,7 +384,7 @@ img {
     justify-content: center;
     align-items: center;
     display: block;
-    
+
 }
 
 
@@ -435,69 +448,22 @@ img {
     height: 24px;
     overflow: hidden;
     margin: 0 20px;
-    display: block;
 }
 
-.notice-wrap>.notice {
+
+/* 기본 상태: 모두 아래(대기) */
+.notice-wrap .notice {
     position: absolute;
-    z-index: 100;
-    top: 0;
     left: 0;
+    top: 100%;/* 아래쪽에서 대기 */
     width: 100%;
-    height: 100%;
-    /* 필요하면 사용 */
     line-height: 24px;
+    margin: 0;
     opacity: 0;
-    /* transition: opacity 0.5s ease; */
-    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition: top .6s ease, opacity .6s ease;
 }
 
 /* 화면에 올라온 상태 */
-.notice-wrap .notice.on {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* 위로 나가며 사라지는 상태 */
-.notice-wrap .notice.out {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-/* 움직임 민감 사용자 배려(선택) */
-@media (prefers-reduced-motion: reduce) {
-  .notice-wrap .notice {
-    transition: none;
-  }
-}
-
-
-
-/* 부모가 공간을 확보하고 잘라내기 */
-.box1 .notice-wrap{
-  position: relative;
-  flex: 1 1 auto;   /* 가로로 넓게 */
-  min-width: 0;
-  height: 24px;     /* 한 줄 높이 */
-  overflow: hidden; /* 슬라이드 업 클리핑 */
-  margin: 0 20px;
-}
-
-/* 모든 공지는 기본적으로 아래에 대기 */
-.notice-wrap .notice{
-  position: absolute;
-  left: 0;
-  top: 100%;                 /* 아래 대기 */
-  width: 100%;
-  line-height: 24px;
-  margin: 0;
-  opacity: 0;
-  transform: translateY(0);  /* top으로만 이동 */
-  transition: top .6s ease, opacity .6s ease;
-  /* display: none; 금지! 보이기/숨기기는 클래스와 top/opacity로 */
-}
-
-/* 화면에 보이는 상태 */
 .notice-wrap .notice.on{
   top: 0;
   opacity: 1;
@@ -509,9 +475,27 @@ img {
   opacity: 0;
 }
 
-/* @media (prefers-reduced-motion: reduce){
+/* 모션 민감 사용자(선택) */
+@media (prefers-reduced-motion: reduce){
   .notice-wrap .notice{ transition: none; }
-} */
+}
+
+
+
+/* 부모가 공간을 확보하고 잘라내기 */
+.box1 .notice-wrap {
+    position: relative;
+    flex: 1 1 auto;
+    /* 가로로 넓게 */
+    min-width: 0;
+    height: 24px;
+    /* 한 줄 높이 */
+    overflow: hidden;
+    /* 슬라이드 업 클리핑 */
+    margin: 0 20px;
+}
+
+
 
 
 
@@ -539,21 +523,50 @@ img {
     top: 50%;
     left: 0px;
     transform: translate(-50%, -50%);
+    z-index: 10;
 }
 
 .landing .box2>.btnL img {
     width: 100%;
 }
 
-.landing .box2 p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0873FE;
+.landing .box2 .imgWrap {
     border-radius: 20px;
     width: 960px;
     height: 600px;
+    position: relative;
 }
+
+.landing .box2 .imgWrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 반응형 */
+    height: 100%;
+    display: none;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.box2 .imgWrap img.active {
+    /* width: 100%;
+    height: 100%; */
+    display: block;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 .landing .box2 p a {
     width: 100%;
