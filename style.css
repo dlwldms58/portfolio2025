@@ -681,8 +681,9 @@ main {
     justify-content: center;
     transition: all 0.4s ease;
     vertical-align: bottom;
-    
+
 }
+
 .project-image img {
     width: 100%;
     height: 100%;
@@ -755,14 +756,14 @@ main {
 }
 
 .project-proficiency li {
-  display: flex;
-  align-items: center;
-  gap: 10px; 
- /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* background-color: red; */
 }
 
 
-.project-linkBox {
+.linkBox {
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -771,43 +772,50 @@ main {
     width: 100%;
 }
 
-.project-link {
+.linkBox div {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 40px;
+    width: 100%;
+    color: #000;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
+.linkBox div:hover {
+    background: linear-gradient(135deg, #a8e6cf 0%, #7fcdcd 50%, #88d8c0 100%);
+    border: 1px solid transparent;
+    border-image: linear-gradient(135deg, #a8e6cf 0%, #7fcdcd 50%, #88d8c0 100%);
+    border-image-slice: 1;
+    border-radius: 20px;
+    color: #fff;
+    transform: translateY(-3px);
+    -webkit-mask-image: radial-gradient(#fff 100%, #000 100%);
+    mask-image: radial-gradient(#fff 100%, #000 100%);
+}
+
+.project-link {
     padding: 10px 20px;
     border: 1px solid #000;
     border-radius: 20px;
     width: 100%;
     color: #000;
-    transition: all 0.2s ease;
-
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
+
 
 .project-link:hover {
     background: linear-gradient(135deg, #a8e6cf 0%, #7fcdcd 50%, #88d8c0 100%);
+    border: 1px solid transparent;
+    border-image: linear-gradient(135deg, #a8e6cf 0%, #7fcdcd 50%, #88d8c0 100%);
+    border-image-slice: 1;
+    border-radius: 20px;
     color: #fff;
-    border: 1px solid #fff;
-    
-}
-
-.project-link {
-  padding: 10px 20px;
-  border: 1px solid #000;
-  border-radius: 20px;
-  width: 100%;
-  color: #000;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.project-link:hover {
-  border: 1px solid transparent;
-  border-image: linear-gradient(135deg, #a8e6cf 0%, #7fcdcd 50%, #88d8c0 100%);
-  border-image-slice: 1;
-  border-radius: 20px;         /* ✅ 모서리 둥글게 유지 */
-  color: #fff;
-  transform: translateY(-3px);
-  -webkit-mask-image: radial-gradient(#fff 100%, #000 100%); /* Safari 대응 */
-  mask-image: radial-gradient(#fff 100%, #000 100%);
+    transform: translateY(-3px);
+    -webkit-mask-image: radial-gradient(#fff 100%, #000 100%);
+    mask-image: radial-gradient(#fff 100%, #000 100%);
 }
 
 
@@ -984,7 +992,40 @@ footer p {
 /* ----------------------------------------------------
    컨셉뷰 팝업설정
 ---------------------------------------------------- */
-
-.Black_Bg .popUp {
+/* ===== Concept Modal ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 700px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content p img {
+    width: 100%;
+}
+
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal {
+  /* 기존 속성 유지 + 아래 두 줄만 추가하면 좋아 */
+  overscroll-behavior: contain;      /* 배경 페이지로 스크롤 튕김 방지 */
+  -webkit-overflow-scrolling: touch; /* iOS 관성 스크롤 */
 }

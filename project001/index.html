@@ -24,10 +24,7 @@
 
 
     <style>
-        .ui-datepicker {
-            width: 350px;
-            height: auto;
-        }
+
     </style>
 </head>
 
@@ -142,8 +139,10 @@
                                 <div class="modal" id="modal1">
                                     <div class="modal-content">
                                         <span class="close">&times;</span>
-                                        <h2>팝업 1</h2>
-                                        <p>첫 번째 팝업 내용입니다.</p>
+                                        <h2>운영시간 및 운영요금</h2>
+                                        <p>
+                                            <img src="img/timeFee.png" alt="">
+                                        </p>
                                     </div>
                                 </div>
 
@@ -173,8 +172,10 @@
                                 <div class="modal" id="modal2">
                                     <div class="modal-content">
                                         <span class="close">&times;</span>
-                                        <h2>팝업 2</h2>
-                                        <p>두 번째 팝업 내용입니다.</p>
+                                        <h2>운영시간 및 운영요금</h2>
+                                        <p>
+                                            <img src="img/timeFee.png" alt="">
+                                        </p>
                                     </div>
                                 </div>
                                 <h3 class="fee_title">운영요금</h3>
@@ -193,10 +194,34 @@
                             </div>
                         </div>
                         <div class="box3-2">
+                            <!-- <div class="calendarReservation">
+                                <div class="datepicker-container">
+                                    <div class="datepicker-header">
+                                        <div class="datepicker-title">June 2024</div>
+                                        <div class="datepicker-nav">
+                                            <button class="datepicker-btn" onclick="prevMonth()">‹</button>
+                                            <button class="datepicker-btn" onclick="nextMonth()">›</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="datepicker-weekdays">
+                                        <div class="weekday">Sun</div>
+                                        <div class="weekday">Mon</div>
+                                        <div class="weekday">Tue</div>
+                                        <div class="weekday">Wed</div>
+                                        <div class="weekday">Thu</div>
+                                        <div class="weekday">Fri</div>
+                                        <div class="weekday">Sat</div>
+                                    </div>
+
+                                    <div class="datepicker-days" id="daysContainer"></div>
+                                </div>
+                            </div> -->
                             <div class="reservation_calendar">
                                 <!-- <div id="calendar" style=""></div> -->
                                 <img src="img/calendar.png" alt="">
                             </div>
+
                             <form>
                                 <div class="reservation_date">
                                     <p>※예약을 원하는 날짜를 선택해주세요.</p>
@@ -653,7 +678,7 @@
             </div>
         </section>
     </div>
-    <footer class="boxC">
+    <footer class="boxC" >
         <div class="boxC-1">
             <div class="copyright">
                 <p>본 페이지는 포트폴리오용으로 제작된 사이트 입니다. <br>
@@ -664,20 +689,90 @@
     </footer>
 
     <script>
-        $('#calendar').datepicker({
-            onSelect: function (dateText, inst) {
-                let year = inst.selectedYear;
-                let mon = inst.selectedMonth + 1;
-                let day = inst.selectedDay;
+        // $('#calendar').datepicker({
+        //     onSelect: function (dateText, inst) {
+        //         let year = inst.selectedYear;
+        //         let mon = inst.selectedMonth + 1;
+        //         let day = inst.selectedDay;
 
 
-                $('.date1').text(`${year}년${mon}월${day}일`)
+        //         $('.date1').text(`${year}년${mon}월${day}일`)
+
+        //     }
+        // })
 
 
-                // $('.date1').text(${})
+        let currentDate = new Date(2024, 5, 1); // June 2024
+        let selectedDate = new Date(2024, 5, 26); // June 26 selected
 
+        function renderCalendar() {
+            const container = document.getElementById('daysContainer');
+            container.innerHTML = '';
+
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const daysInPrevMonth = new Date(year, month, 0).getDate();
+
+            // 이전 달의 날짜들
+            for (let i = firstDay - 1; i >= 0; i--) {
+                const btn = document.createElement('button');
+                btn.className = 'day other-month';
+                btn.textContent = daysInPrevMonth - i;
+                container.appendChild(btn);
             }
-        })
+
+            // 현재 달의 날짜들
+            for (let i = 1; i <= daysInMonth; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'day';
+                btn.textContent = i;
+
+                const date = new Date(year, month, i);
+
+                if (selectedDate.toDateString() === date.toDateString()) {
+                    btn.classList.add('selected');
+                } else if (new Date().toDateString() === date.toDateString()) {
+                    btn.classList.add('today');
+                }
+
+                btn.onclick = () => selectDate(date);
+                container.appendChild(btn);
+            }
+
+            // 다음 달의 날짜들
+            const totalCells = container.children.length;
+            const remainingCells = 42 - totalCells;
+            for (let i = 1; i <= remainingCells; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'day other-month';
+                btn.textContent = i;
+                container.appendChild(btn);
+            }
+
+            // 헤더 업데이트
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'];
+            document.querySelector('.datepicker-title').textContent = `${monthNames[month]} ${year}`;
+        }
+
+        function selectDate(date) {
+            selectedDate = date;
+            renderCalendar();
+        }
+
+        function prevMonth() {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        }
+
+        function nextMonth() {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        }
+
+        renderCalendar();
     </script>
 </body>
 
