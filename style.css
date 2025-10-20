@@ -109,22 +109,22 @@ body {
 }
 
 .bubble:nth-child(1) {
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     left: 10%;
     animation-delay: 0s;
 }
 
 .bubble:nth-child(2) {
-    width: 20px;
-    height: 20px;
+    width: 100px;
+    height: 100px;
     left: 70%;
     animation-delay: 5s;
 }
 
 .bubble:nth-child(3) {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
     left: 30%;
     animation-delay: 10s;
 }
@@ -153,13 +153,17 @@ body {
    Header / Nav
 ---------------------------------------------------- */
 header {
-    width: 100%;
+    width: 1000px;
     height: 76px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);/* 유리처럼 흐리게 */
+    -webkit-backdrop-filter: blur(10px);/* 사파리 호환 */
     backdrop-filter: blur(20px);
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 70px;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
@@ -181,12 +185,12 @@ nav ul {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    /* background-color: rebeccapurple; /* debug */
-    */
+    border-radius: 70px;
 }
 
 nav ul li {
     width: 110px;
+    border-radius: 70px;
 }
 
 nav ul a {
@@ -1025,7 +1029,9 @@ footer p {
 }
 
 .modal {
-  /* 기존 속성 유지 + 아래 두 줄만 추가하면 좋아 */
-  overscroll-behavior: contain;      /* 배경 페이지로 스크롤 튕김 방지 */
-  -webkit-overflow-scrolling: touch; /* iOS 관성 스크롤 */
+    /* 기존 속성 유지 + 아래 두 줄만 추가하면 좋아 */
+    overscroll-behavior: contain;
+    /* 배경 페이지로 스크롤 튕김 방지 */
+    -webkit-overflow-scrolling: touch;
+    /* iOS 관성 스크롤 */
 }
