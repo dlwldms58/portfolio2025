@@ -1,258 +1,326 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design & Code Portfolio</title>
+    <title>rose</title>
     <!-- 스타일시트 연결 -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- 제이쿼리 CDN -->
+    <!-- 제이쿼리CDN -->
     <script src="javascript/jquery-3.7.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-    <!--  폰트어썸CDN -->
-    <!-- <script src="https://kit.fontawesome.com/72900f73c2.js" crossorigin="anonymous"></script> -->
-    <script src="https://kit.fontawesome.com/5b60675eee.js" crossorigin="anonymous"></script>
-
-    <!-- 외부스크립트 연결 -->
+    <!-- 외부스크립트연결 -->
     <script src="javascript/js.js"></script>
 
+    <!-- 폰트어썸연결CDN -->
+    <!-- <script src="https://kit.fontawesome.com/5b60675eee.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
-    <div class="water-bg"></div>
-    <div class="water-caustics"></div>
-    <div class="floating-elements">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
-
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#about">Skills</a></li>
-                <li class="logo"><a href="#home"><img src="images/smallkoi_white.png" alt="home"></a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero" id="home">
-        <div class="LogoTop"><img src="images/LogoTop.png" alt=""></div>
-        <h1>
-            <div class="koi"><img src="images/koi.png" alt=""></div>
-            <div class="logo_big"><img src="images/portfolio_logo.png" alt=""></div>
-        </h1>
-        <ul class="Scroll">
-            <li class="mouse"><img src="images/mouse.png" alt=""></li>
-            <li class="mouseScroll"><img src="images/MouseScroll02.png" alt=""></li>
+    <nav>
+        <ul class="gnb">
+            <li class="on"><a href="#profile">Profile</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#landing"><img src="img/rose.png" alt=""></a></li>
+            <li><a href="#ambassador">Ambassador</a></li>
+            <li><a href="#video">Video</a></li>
         </ul>
+    </nav>
+
+    <section class="landing" id="landing">
+        <h1 class="rosie">
+            <span>r</span>
+            <span>o</span>
+            <span>s</span>
+            <span>i</span>
+            <span>e</span>
+        </h1>
+        <div class="Lstar">
+            <img src="img/Star01.png" alt="">
+            <img src="img/Star02.png" alt="">
+            <img src="img/Star03.png" alt="">
+            <img src="img/Star04.png" alt="">
+            <img src="img/Star05.png" alt="">
+            <img src="img/Star06.png" alt="">
+            <img src="img/Star02.png" alt="">
+            <img src="img/Star02.png" alt="">
+        </div>
+        <div class="sealingWax">
+            <img class="seal-intact" src="img/sealingwax.png" alt="">
+            <img class="seal-broken" src="img/sealingWaxBreak.png" alt="">
+        </div>
+
+        <!-- <div class="stars-container"></div> -->
     </section>
 
-    <main>
-        <section class="section" id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="profile-section">
-                    <div class="profile-image">
-                        <img src="images/LEEJIEUN.png" alt="">
-                    </div>
-                    <div class="profile-tags">
-                        <span class="tag">ENFP</span>
-                        <span class="tag">태권도 3단</span>
-                        <span class="tag">중국어</span>
-                        <!-- <span class="tag">1종 보통 면허</span> -->
+    <section class="profile" id="profile">
+        <!-- <div class="stars-container"></div> -->
+        <div class="introduce">
+            <ul class="intro_01">
+                <li><strong>ROSÉ</strong></li>
+                <li><strong>Birth</strong></li>
+                <li><strong>MBTI</strong> </li>
+                <li><strong>Solo Debut</strong></li>
+                <li><strong>Notable Songs</strong></li>
+            </ul>
+            <ul class="intro_02">
+                <li>Roseanne Park</li>
+                <li>1997.02.11</li>
+                <li>ENFP</li>
+                <li>2021, Single Album R</li>
+                <li>APT</li>
+            </ul>
+        </div>
+        <div class="Album">
+            <img src="img/apt.png" alt="">
+            <h3>rosie</h3>
+        </div>
+        <div class="Awards">
+            <ul>
+                <li class="on">2012 – Auditioned for YG Entertainment, became a trainee</li>
+                <li>2016 – Debuted as a member of BLACKPINK (Main Vocalist)</li>
+                <li>2018–2019 – World tours with BLACKPINK (In Your Area)</li>
+                <li>2020 – Featured in multiple global campaigns</li>
+                <li>2021 – Solo Debut with single album R</li>
+                <li>2021 – Appointed as Tiffany & Co. global ambassador</li>
+                <li>2022–2023 – BLACKPINK Born Pink world tour</li>
+                <li>2024 – Continued ambassador activities & fashion events</li>
+            </ul>
+        </div>
+        <div class="rose01">
+            <img src="img/rose03.png" alt="">
+        </div>
+        <div class="rose02">
+            <img src="img/rose02.png" alt="">
+        </div>
+        <div class="Pstar">
+            <img src="img/Star01.png" alt="">
+            <img src="img/Star02.png" alt="">
+            <img src="img/Star03.png" alt="">
+            <!-- <img src="img/Star01.png" alt="">
+            <img src="img/Star01.png" alt=""> -->
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="slideBoard">
+            <ul>
+                <li>Saint Laurent</li>
+                <li>Tiffany & Co.</li>
+                <li>YSL Beauty</li>
+                <li>Sulwhasoo</li>
+                <li>PUMA</li>
+
+                <!-- 똑같은 리스트 복붙 -->
+                <li>Saint Laurent</li>
+                <li>Tiffany & Co.</li>
+                <li>YSL Beauty</li>
+                <li>Sulwhasoo</li>
+                <li>PUMA</li>
+
+                <!-- 똑같은 리스트 복붙 -->
+                <li>Saint Laurent</li>
+                <li>Tiffany & Co.</li>
+                <li>YSL Beauty</li>
+                <li>Sulwhasoo</li>
+                <li>PUMA</li>
+            </ul>
+        </div>
+
+        <div class="crown">
+            <img src="img/crown(2).png" alt="">
+        </div>
+        <p class="txt">
+            Rosie<span>Park</span>
+            <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em>
+        </p>
+        <div class="crownLight">
+            <img src="img/light.png" alt="">
+        </div>
+
+        <div class="galleryWrap">
+            <article>
+                <img src="img/gallery12.jpg" alt="">
+            </article>
+            <article class="">
+                <img src="img/gallery07.jpg" alt="">
+            </article>
+            <article>
+                <img src="img/gallery04.jpg" alt="">
+            </article>
+            <article>
+                <img src="img/gallery08.jpg" alt="">
+            </article>
+            <article>
+                <img src="img/gallery13.jpg" alt="">
+            </article>
+            <article>
+                <img src="img/gallery10.jpg" alt="">
+            </article>
+            <article>
+                <img src="img/gallery03.jpg" alt="">
+            </article>
+            <article>
+                <img src="img/gallery15.jpg" alt="">
+            </article>
+            <article>
+                <img src="img/gallery14.jpg" alt="">
+            </article>
+            <article>
+                <img src="img/gallery16.jpg" alt="">
+                <!-- <h2><a href="img/pic3.jpg">Art Work 10</a></h2>
+                <strong><img src="img/s3.jpg" alt=""></strong>
+                <p><img src="" alt=""></p>
+                <em>Artwork descroption coms here.
+                    <br>2025.09.22
+                </em>
+                <span>close</span> -->
+            </article>
+        </div>
+        <div class="stars-container"></div>
+    </section>
+
+    <section class="ambassador" id="ambassador">
+        <div class="stars-container"></div>
+        <div class="circle">
+            <article class="face1">
+                <h1>Co company</h1>
+                <div class="inner">
+                    <div>
+
+                        <img src="img/roseImg11.jpg" alt="">
                     </div>
                 </div>
-
-                <div class="about-text">
-
-                    <div class="AboutMe">
-                        <h3>About me</h3>
-                        <ul class="">
-                            <li>이지은</li>
-                            <!-- <li>ENFP</li> -->
-                            <li>dlwldms58@naver.com</li>
-                        </ul>
+            </article>
+            <article class="face2">
+                <h1>What's New</h1>
+                <div class="inner">
+                    <div>
+                        <img src="img/roseImg3.jpg" alt="">
                     </div>
-
-                    <div class="License">
-                        <h3>License</h3>
-                        <ul class="">
-                            <li><strong></strong></li>
-                            <!-- <li>HSK5급</li> -->
-                            <!-- <li>태권도 3단</li> -->
-                            <li>1종 보통 면허</li>
-                            <li>TOEIC speaking MI3</li>
-                        </ul>
+                </div>
+            </article>
+            <article class="face3">
+                <h1>Members</h1>
+                <div class="inner">
+                    <div>
+                        <img src="img/roseImg01.jpg" alt="">
                     </div>
+                </div>
+            </article>
+            <article class="face4">
+                <h1>Advertisement</h1>
+                <div class="inner">
+                    <div>
+                        <video muted autoplay loop>
+                            <source src="img/rose _id2.mp4" type="video/mp4">
+                        </video>
 
-                    <div class="Education">
-                        <h3>Education</h3>
-                        <ul class="">
-                            <li>2024 - 대전대학교 중문과 졸업</li>
-                            <li>2025 - NCS UI/UX 반응형 웹디자인 & 웹퍼블리셔 개발자 과정 수료</li>
-                        </ul>
                     </div>
+                </div>
+            </article>
+            <article class="face5">
+                <h1>Vogue</h1>
+                <div class="inner">
+                    <div>
 
-                    <div class="KeyWords">
-                        <h3>Key words</h3>
-                        <ul>
-                            <li>소통능력</li>
-                            <li>끈기</li>
-                            <li>도전 정신</li>
-                            <li>적응력</li>
-                            <li>세심함</li>
-                            <li>목표지향</li>
-                        </ul>
+                        <img src="img/roseImg10.jpg" alt="">
                     </div>
-
-                    <div class="Skills">
-                        <h3>Skills</h3>
-                        <ul>
-                            <li><img src="images/html_Icon2 1.png" alt=""></li>
-                            <li><img src="images/css_Icon 2.png" alt=""></li>
-                            <li><img src="images/javascript_icon 2.png" alt=""></li>
-                            <li><img src="images/jQuery_icon 2.png" alt=""></li>
-                            <li><img src="images/photoshopIcon.png" alt=""></li>
-                            <li><img src="images/illustratorIcon.png" alt=""></li>
-                            <li><img src="images/figma_icon2 1.png" alt=""></li>
-                        </ul>
+                </div>
+            </article>
+            <article class="face6">
+                <h1>Services</h1>
+                <div class="inner">
+                    <div>
+                        <img src="img/roseImg05.jpg" alt="">
                     </div>
-                    <!-- <p>안녕하세요! 디자인과 코드의 경계를 넘나드는 창작자입니다. 아름다운 시각적 경험과 완벽한 사용자 인터페이스를 만드는 것이 저의 열정입니다.</p>
+                </div>
+            </article>
+            <article class="face7">
+                <h1>Promotion</h1>
+                <div class="inner">
+                    <div>
+                        <img src="img/roseImg14.jpg" alt="">
+                    </div>
+                </div>
+            </article>
+            <article class="face8">
+                <h1>Temperature</h1>
+                <div class="inner">
+                    <div>
+                        <video muted autoplay loop>
+                            <source src="img/roseImg.mp4" type="video/mp4">
+                        </video>
 
-                    <p>사용자 중심의 디자인 철학을 바탕으로, 단순히 예쁜 것을 넘어서 의미있고 기능적인 디지털 경험을 창조합니다. 새로운 기술과 디자인 트렌드를 끊임없이 탐구하며, 창의적인
-                        솔루션을 통해 복잡한 문제를 해결합니다.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="fullShot">
+            <img src="img/rose00.png" alt="rosefullshot">
+        </div>
+        <div class="starBottom">
+            <img src="img/Star_bottom.png" alt="">
+        </div>
+    </section>
 
-                    <p>디자인과 개발 사이의 완벽한 균형을 추구하며, 아이디어에서 실제 구현까지 전 과정을 아우르는 통합적 접근 방식을 지향합니다.</p> -->
+    <section class="Video" id="video">
+        <div class="PLAYER">
+            <div class="videoAlbum">
+                <img src="img/rosie.png" alt="">
+            </div>
+            <div class="playMusicLight">
+                <div class="Title">
+                    <p>toxic till the end</p>
+                    <span><img src="img/Like.png" alt=""></span>
+                    <!-- <span><img src="img/Like(1).png" alt=""></span> -->
+                </div>
+                <img src="img/light.png" alt="">
+            </div>
+            <div class="music-player">
+                <audio id="audio" src="music/sample.mp3" preload="metadata"></audio>
+
+                <!-- 진행 바 -->
+                <div class="progress-container" id="seek">
+                    <div class="progress" id="progress"></div>
+                </div>
+
+                <!-- 시간 -->
+                <div class="time">
+                    <span id="current">0:00</span>
+                    <span id="duration">-0:00</span>
+                </div>
+
+                <!-- 버튼 -->
+                <div class="controls">
+                    <button id="prev">
+                        <img src="img/player01.png" alt="">
+                    </button>
+                    <button id="play">
+                        <img src="img/player02.png" alt="">
+                    </button>
+                    <button id="pause" style="display: none;">
+                        <img src="img/pause.png" alt="">
+                    </button>
+                    <button id="next">
+                        <img src="img/player03.png" alt="">
+                    </button>
                 </div>
             </div>
-        </section>
-
-        <section class="section" id="projects">
-            <h2 class="section-title">2025 Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"><img src="images/projectLandingPage.png" alt="">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">대전 아쿠아리움 웹사이트 리뉴얼</h3>
-                        <p class="project-description">직관적인 정보 탐색과 예매 시스템, 생동감 있는 디자인으로 즐거운 해양 체험을 온라인에서도 느낄 수 있도록 한
-                            프로젝트입니다.</p>
-                        <ul class="project-proficiency">
-                            <li><strong>Type</strong> 개인작업 100%</li>
-                            <li><strong>Tools</strong> Figma, Photoshop, HTML5, CSS3, Javascript</li>
-                        </ul>
-                        <ul class="linkBox">
-                            <li><div id="openModal1">Concept View</div></li>
-                            <li><a href="https://dlwldms58.github.io/portfolio2025/project001/" class="project-link">Web
-                                    Site</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"><img src="images/BhcLandingPage.png" alt=""></div>
-                    <div class="project-content">
-                        <h3 class="project-title">BHC 웹사이트 리뉴얼</h3>
-                        <p class="project-description">브랜드 아이덴티티 강화와 함께 캐러셀등 다양한 인터랙션을 적용해, 시각적 즐거움과 몰입감 있는 사용자 경험으로
-                            리뉴얼했습니다.</p>
-                        <ul class="project-proficiency">
-                            <li><strong>Type</strong> 개인작업 100%</li>
-                            <li><strong>Tools</strong> Figma, Photoshop, HTML5, CSS3, Javascript</li>
-                        </ul>
-                        <ul class="linkBox">
-                            <li><div id="openModal2">Concept View</div></li>
-                            <li><a href="https://dlwldms58.github.io/portfolio2025/project002/" class="project-link">Web
-                                    Site</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"><img src="images/roseLandingPage.png" alt=""></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Blackpink 로제 인물형 웹사이트</h3>
-                        <p class="project-description">파노라마와 별 떨어짐 애니메이션 등 인터랙션 효과를 활용해, 로제의 음악·패션·커리어를 감각적으로 전달하는
-                            웹사이트입니다.</p>
-                        <ul class="project-proficiency">
-                            <li><strong>Type</strong> 개인작업 100%</li>
-                            <li><strong>Tools</strong> Figma, Photoshop, HTML5, CSS3, Javascript</li>
-                        </ul>
-                        <ul class="linkBox">
-                            <li><div id="openModal3">Concept View</div></li>
-                            <li><a href="https://dlwldms58.github.io/portfolio2025/project003/" class="project-link">Web
-                                    Site</a></li>
-                        </ul>
-                    </div>
-                </div>
+        </div>
+        <div class="playVideo">
+            <div class="videoBox">
+                <video muted autoplay loop>
+                    <source src="img/video001.mp4" type="video/mp4">
+                </video>
             </div>
-        </section>
-
-        <section class="section" id="contact">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <p>새로운 프로젝트나 창의적인 협업에 대한 이야기를 나누고 싶습니다.<br>언제든지 편하게 연락해 주세요!</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon"><img src="images/MailIcon.png" alt=""></div>
-                        <span>dlwldms58@naver.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><img src="images/kakao-talkIcon.png" alt=""></div>
-                        <span><a href="">dlwldms58</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-githubIcon"><img src="images/githubIcon.png" alt=""></div>
-                        <!-- <div>🔗</div> -->
-                        <span><a href="">Github</a></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-
-            <p>copyright ⓒ 2025.green310. All Rights Reserved.</p>
-
-            <p>본 페이지는 포트폴리오용으로 제작된 사이트 입니다.
-                해당사이트의 이미지와 동영상 기타 상세내용은 상업용으로 사용하지 않습니다.</p>
         </div>
-    </footer>
-
-
-    <!-- 팝업 1 -->
-    <div class="modal" id="modal1">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>대전 아쿠아리움 웹사이트 리뉴얼</h2>
-            <p><img src="images/project001conceptview.png" alt="project001conceptview"></p>
-        </div>
-    </div>
-
-    <!-- 팝업 2 -->
-    <div class="modal" id="modal2">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>BHC 웹사이트 리뉴얼</h2>
-            <p><img src="images/project002conceptview.png" alt="project002conceptview"></p>
-        </div>
-    </div>
-
-    <!-- 팝업 3 -->
-    <div class="modal" id="modal3">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Blackpink 로제 인물형 웹사이트</h2>
-            <p><img src="images/project003conceptview.png" alt="project003conceptview"></p>
-        </div>
-    </div>
-
-
+        <div class="stars-container"></div>
+    </section>
 
 </body>
+
+</html>
