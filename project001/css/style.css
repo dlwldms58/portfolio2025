@@ -852,7 +852,8 @@ opacity: 0.8;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 13px;
+    font-size: 15px;
+    padding-top: 10px;
 }
 
 .time_txt1 {}
@@ -899,7 +900,8 @@ opacity: 0.8;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 13px;
+    font-size: 15px;
+    padding-top: 10px;
 }
 
 .fee_txt1 {}
@@ -927,12 +929,13 @@ opacity: 0.8;
     width: 400px;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 20px;
-    /* background-color: rebeccapurple;     */
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -940,6 +943,34 @@ opacity: 0.8;
 .reservation_calendar>img {
     width: 100%;
     border-radius: 20px;
+}
+
+.dateInner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* padding: 10px; */
+}
+
+.dateInner img {
+    width: 30px;
+}
+
+.date2 {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #777777;
+    padding: 0 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    font-size: 15px;
+    background-color: #fff;
 }
 
 
@@ -951,27 +982,40 @@ opacity: 0.8;
     height: 300px;
 }
 
-.reservation_date {
-    width: 360px;
+#datepicker {
+    width: 400px;
+    height: 270px;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: #03E3FF; */
+}
+
+.reservation_date {
+    width: 380px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 10px;
+    text-align: left;
+    /* background-color: #03E3FF; */
+
 }
 
 .reservation_date>p {
     font-size: 14px;
     color: red;
     width: 300px;
+    text-align: left;
 }
 
 .reservation_people {
-    width: 360px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 10px;
+    padding-top: 10px;
 }
 
 .reservation_people span {}
@@ -1125,6 +1169,11 @@ opacity: 0.8;
     position: relative;
 }
 
+.review_img img {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+ 
+}
+
 .review_img .img01 {
     position: absolute;
     top: 0;
@@ -1133,6 +1182,7 @@ opacity: 0.8;
     background-color: #777777;
     border-radius: 10px;
     z-index: 10;
+
 
 }
 
@@ -2236,7 +2286,7 @@ section {
   .reservation_people,
   .reservation_tiket {
     width: 100%;
-    padding: 0 15px;
+    /* padding: 0 15px; */
   }
 
   .reservation_people > .people,
@@ -2546,7 +2596,7 @@ section {
   .reservation_people,
   .reservation_tiket {
     width: 100%;
-    padding: 0 10px;
+    /* padding: 0 10px; */
   }
 
   .reservation_people > .people,

@@ -5,207 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>달력만들기</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <!-- 제이쿼리CDN -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+
 
     <style>
-  .ui-datepicker-inline {
-    width: 360px !important;
-    min-height: 250px !important;
-    /* max-height: 300px !important; */
-    border: none !important;
-    background: white !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
-    border-radius: 12px !important;
-    padding: 24px !important;
-  }
+        .ui-state-highlight,
+        .ui-widget-content .ui-state-highlight,
+        .ui-widget-header .ui-state-highlight {
 
-  .ui-datepicker-header {
-    background: white !important;
-    border: none !important;
-    margin-bottom: 24px !important;
-    padding: 0 !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-  }
+            background: red;
+        }
 
-  .ui-datepicker-title {
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    order: 1;
-  }
+        .ui-datepicker-inline,
+        .ui-datepicker,
+        .ui-widget,
+        .ui-widget-content,
+        .ui-helper-clearfix,
+        .ui-corner-all {
+            width: 300px;
+            /* height: 200px; */
+        }
 
-  .ui-datepicker-prev,
-  .ui-datepicker-next {
-    background: none !important;
-    border: none !important;
-    cursor: pointer !important;
-    padding: 4px 8px !important;
-    border-radius: 4px !important;
-    transition: background 0.2s !important;
-  }
-
-  .ui-datepicker-prev:hover,
-  .ui-datepicker-next:hover {
-    background: #f0f0f0 !important;
-  }
-
-  .ui-datepicker-prev .ui-icon,
-  .ui-datepicker-next .ui-icon {
-    background-image: none !important;
-    text-indent: 0 !important;
-    font-size: 18px !important;
-    color: #0066ff !important;
-  }
-
-  .ui-datepicker-prev .ui-icon::before {
-    content: '‹' !important;
-  }
-
-  .ui-datepicker-next .ui-icon::before {
-    content: '›' !important;
-  }
-
-  .ui-datepicker-calendar {
-    background: white !important;
-    border-collapse: separate !important;
-    border-spacing: 8px !important;
-    margin-top: 12px !important;
-  }
-
-  .ui-datepicker-calendar thead th {
-    background: white !important;
-    border: none !important;
-    color: #999 !important;
-    font-size: 12px !important;
-    font-weight: 500 !important;
-    text-transform: uppercase !important;
-    padding: 8px 0 !important;
-    text-align: center !important;
-  }
-
-  .ui-datepicker-calendar td {
-    padding: 0 !important;
-    border: none !important;
-    width: 46px !important;
-    height: 46px !important;
-  }
-
-  .ui-datepicker-calendar a {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    color: #1a1a1a !important;
-    font-size: 16px !important;
-    background: white !important;
-    border: none !important;
-    transition: all 0.2s !important;
-  }
-
-  .ui-datepicker-calendar a:hover {
-    background: #f0f0f0 !important;
-  }
-
-  .ui-datepicker-calendar .ui-state-default {
-    background: white !important;
-    color: #1a1a1a !important;
-    border: none !important;
-  }
-
-  .ui-datepicker-calendar .ui-state-default:hover {
-    background: #f0f0f0 !important;
-  }
-
-  .ui-datepicker-calendar .ui-state-highlight {
-    background: #0066ff !important;
-    color: white !important;
-    font-weight: 600 !important;
-  }
-
-  .ui-datepicker-calendar .ui-state-highlight:hover {
-    background: #0052cc !important;
-  }
-
-  .ui-datepicker-calendar .ui-state-active {
-    background: #0066ff !important;
-    color: white !important;
-  }
-
-  .ui-datepicker-other-month .ui-state-default {
-    color: #ccc !important;
-    background: white !important;
-    cursor: default !important;
-  }
-
-  .ui-datepicker-other-month .ui-state-default:hover {
-    background: white !important;
-  }
-
-  .ui-datepicker-unselectable .ui-state-default {
-    background: white !important;
-    color: #ccc !important;
-  }
-
-  .ui-state-disabled {
-    opacity: 0 !important;
-  }
-
-  .ui-helper-clearfix::after {
-    display: none !important;
-  }
+        .ui-datepicker {
+            border-radius: 10px;
+         }
     </style>
+
 </head>
 
 <body>
+
+
     <!-- 인풋방식으로 달력출력하기 -->
     <p>
         <input type="text" id="date">
     </p>
 
+    <!--  블럭방식으로 달력출력하기 -->
+    <div id="datepicker"></div>
 
-    <!-- 블럭방식으로 달력 출력하기 -->
-    <div id="datepicker">
-
-    </div>
-    <br>
-    <br>
-    <!-- 선택한 날짜 출력하기 -->
-    <div class="date1"></div>
-
-
-
-    <!-- 다시 만들어보기 -->
-    <div id="datepicker" class="hasDatepicker" style="border: none;">
-
+    <!-- 데이트피커 안에 있는거 다 꺼내오기 -->
+    <!-- <div id="datepicker" class="hasDatepicker">
         <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"
-            style="display: block; border: none;">
-            <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all" style="background: none; border: none;">
-
+            style="display: block;">
+            <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
                 <a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev">
-                    <span class="ui-icon ui-icon-circle-triangle-w" style="background: none; background-image: url(img/Calendar_Previous.png); 
-                    background-repeat: no-repeat;">Prev</span>
+                    <span class="ui-icon ui-icon-circle-triangle-w">Prev</span>
                 </a>
-
                 <a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next">
-                    <span class="ui-icon ui-icon-circle-triangle-e" style="background: none; background-image: url(img/Calendar_Next.png); 
-                    background-repeat: no-repeat;">Next</span>
+                    <span class="ui-icon ui-icon-circle-triangle-e">Next</span>
                 </a>
-
-                <div class="ui-datepicker-title" >
+                <div class="ui-datepicker-title">
                     <span class="ui-datepicker-month">October</span>&nbsp;
                     <span class="ui-datepicker-year">2025</span>
                 </div>
-
             </div>
-            <table class="ui-datepicker-calendar" >
+            <table class="ui-datepicker-calendar">
                 <thead>
                     <tr>
                         <th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th>
@@ -225,7 +84,7 @@
                         <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
                         <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
                         <td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
-                                class="ui-state-default" href="#" aria-current="false" data-date="1" >1</a></td>
+                                class="ui-state-default" href="#" aria-current="false" data-date="1">1</a></td>
                         <td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
                                 class="ui-state-default" href="#" aria-current="false" data-date="2">2</a></td>
                         <td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
@@ -264,10 +123,8 @@
                                 class="ui-state-default" href="#" aria-current="false" data-date="15">15</a></td>
                         <td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
                                 class="ui-state-default" href="#" aria-current="false" data-date="16">16</a></td>
-                        <td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today"
-                            data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
-                                class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#"
-                                aria-current="true" data-date="17">17</a></td>
+                        <td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
+                                class="ui-state-default" href="#" aria-current="false" data-date="17">17</a></td>
                         <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9"
                             data-year="2025"><a class="ui-state-default" href="#" aria-current="false"
                                 data-date="18">18</a></td>
@@ -280,8 +137,10 @@
                                 class="ui-state-default" href="#" aria-current="false" data-date="20">20</a></td>
                         <td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
                                 class="ui-state-default" href="#" aria-current="false" data-date="21">21</a></td>
-                        <td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
-                                class="ui-state-default" href="#" aria-current="false" data-date="22">22</a></td>
+                        <td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today"
+                            data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
+                                class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#"
+                                aria-current="true" data-date="22">22</a></td>
                         <td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
                                 class="ui-state-default" href="#" aria-current="false" data-date="23">23</a></td>
                         <td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2025"><a
@@ -311,31 +170,46 @@
                 </tbody>
             </table>
         </div>
+    </div> -->
+
+    <!-- 선택한 날짜 출력하기 -->
+    <div class="date1"></div>
+
+    <div class="date2">
+        <span> -- </span>년
+        <span> -- </span>월
+        <span> -- </span>일
     </div>
 
+
     <script>
+
         $('#date').datepicker({
-            dateFormat: "yy년 mm월 dd일"
+
+            dateFormat: "yy년 mm월 dd 일"
+
+            // 위에처럼 하지 않을경우 기본 포맷방식은 09/20/2025
+
         })
         $('#datepicker').datepicker({
+
             onSelect: function (dateText, inst) {
-                let year = inst.selectedYear;
+
+                let year = inst.selectedYear - 2000;
                 let mon = inst.selectedMonth + 1;
                 let day = inst.selectedDay;
 
 
-                $('.date1').text(`${year}년${mon}월${day}일`)
+                // $('.date1').text(`${year}년${mon}월 ${day}일`)
+                $('.date2 span').eq(0).text(year)
+                $('.date2 span').eq(1).text(mon)
+                $('.date2 span').eq(2).text(day)
 
-
-                // $('.date1').text(${})
 
             }
         })
+
     </script>
-
-
-
-
 </body>
 
 </html>
